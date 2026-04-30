@@ -1,0 +1,256 @@
+# Anchor Library
+
+*Calibration cases. The anchor library is a structured corpus of audited offerings used to calibrate the methodology, validate scoring conversions, and check drift across methodology versions. Supplemented with citation-grade industry context where relevant.*
+
+---
+
+## How to use this library
+
+Load alongside `06-signal-catalog.md` and `07-evaluation-rules.md` when running an audit. Cross-check your dimension scores against these cases before finalizing.
+
+When you score a new offering, ask: *does my score for this dimension make sense relative to how the anchor offering scored?*
+
+The anchor library is also the QA substrate for methodology evolution. Before any `methodology_versions` semver bump is committed, the new methodology is run against every anchor case and scored deltas are reviewed. See `07-evaluation-rules.md` "Anchor calibration" section.
+
+The anchors are queryable in the database (`anchor_cases` table with each case's frozen canonical `audit_run_id`).
+
+---
+
+## Quick reference table
+
+| Offering | Verdict | MI score | Pattern type | Tactic density | Trend layer |
+|---|---|---|---|---|---|
+| MAPS PBC | **Surface** | 1.1 | Score-1 anchor | 0–1 | Established |
+| Virta Health | **Surface** | 1.4 | Score-1 anchor | 1–2 | Established |
+| HeartMath | **Flag** | 2.4 | Score-2/3 anchor | 3–4 | Active trend |
+| Levels Health | **Flag** | 2.9 | Score-3 anchor | 3–4 | Active trend |
+| Eight Sleep | **Caution** | 3.3 | Score-3/4 anchor | 4–5 | Active trend |
+| Superpower | **Disqualify** | 4.05 | Disqualify anchor | 6–7 | Peak capitalization |
+| Neuronic | **Disqualify** | 4.0 | Disqualify anchor | 6–8 | Active trend (PBM/POTS) |
+
+*Tactic density and trend-layer figures are illustrative for the original audits and need formal recalibration under the v2 methodology and signal catalog.*
+
+---
+
+## MAPS PBC (Lykos Therapeutics) — primary positive anchor
+
+**What it is:** MDMA-assisted psychotherapy for treatment-resistant PTSD. Phase 3 clinical-trial program. FDA rejection (2024) with transparent response.
+
+**Why it anchors at Surface (~1.1):** 40-year arc of building evidence under sustained commercial and regulatory pressure. Marketing reports rather than promises. FDA rejection was disclosed publicly and integrated into ongoing work rather than spun.
+
+**Active ingredients (OpenLabel framing):** MDMA-assisted psychotherapy protocol with trained therapists. Real, specific, replicable.
+
+**Also contains:** therapeutic alliance, integration support, the legitimacy of a long institutional arc, the patient agency required by the protocol itself.
+
+**Signal-catalog highlights:**
+- `cultural-trend:patient-precedence` = 0 (patient communities led adoption — strong positive)
+- `tactic-density-aggregate` ≤ 1 (essentially absent)
+- No `inverse:*` signals fire
+- `register:*` analysis: Autonomous-Construct-Aware founder register; Autonomous-Pluralist marketing; Expert-Autonomous business model — coherent across layers
+
+**Tone calibration use:** when tempted to score across the board at 1, ask whether they have a 40-year arc of holding genuine uncertainty. If not, calibrate down. Score 1 is rare.
+
+**Verdict:** Surface
+
+---
+
+## Virta Health — Score 1–2 anchor (clinical-evidence-based DTC)
+
+**What it is:** Continuous remote care for type 2 diabetes via nutritional ketosis. Multiple peer-reviewed RCTs and cohort publications.
+
+**Why it anchors high:** evidence-led from founding. Publishes outcomes regardless of result. Honest about subscription dependency for outcome maintenance — does not claim resolution-and-walk-away.
+
+**Active ingredients:** nutritional ketosis intervention plus continuous coaching. Real mechanism, real delivery, real evidence.
+
+**Also contains:** coaching relationship; identity shift around food and metabolic health; access to a clinical channel many people otherwise can't reach.
+
+**Signal-catalog highlights:**
+- D1 high (multiple PMID-resolvable RCTs)
+- `conviviality:dependency-generation` low-medium (subscription required for outcome maintenance — but honestly stated)
+- `tactic:future-faking` flagged at low severity (best-case outcome framing in some marketing) — does not elevate verdict
+
+**Watch in OpenLabel framing:** D7b journey positioning is "Tool" not "Stepping stone" — appropriately scoped, not predatory.
+
+**Verdict:** Surface
+
+---
+
+## HeartMath — Score 2–3 anchor (real mechanism + accumulated practice + inflated commercial framing)
+
+**What it is:** HRV biofeedback training, breath-pacing tools, heart-coherence framework, related certifications.
+
+**Why it anchors here:** the underlying HRV / RSA / coherence science is real; the practice has decades of refinement. The commercial framing extends from "useful biofeedback tool" toward proprietary-cosmology territory ("heart intelligence," coherence as generalized health driver) faster than evidence supports.
+
+**Active ingredients:** paced breathing protocols. HRV biofeedback. Real, mostly accessible without the branded wrapper.
+
+**Also contains:** identity (heart-as-source language), certification community, proprietary cosmological framing layered on accessible practices.
+
+**Signal-catalog highlights:**
+- `tactic:exclusivity-access-illusion` fires (proprietary cosmology around accessible practice)
+- `consumer:cost-active-ingredient-asymmetric` — paced breathing and HRV awareness are accessible through public-domain practices, smartphone apps, basic biofeedback courses
+
+**OpenLabel-native note:** strong Alternative Comparison signal. The active ingredient is freely accessible.
+
+**Verdict:** Flag
+
+---
+
+## Levels Health — Score 3 anchor (real science, overstretched claims)
+
+**What it is:** Continuous glucose monitoring for non-diabetic populations as a metabolic-health biofeedback tool. Subscription with hardware.
+
+**Why it anchors at 3:** real metabolic science underneath. CGM as biofeedback for non-diabetics has emerging evidence. But "81% improved HbA1c, with many reversing prediabetes" is presented without accessible methodology — clinically weighty language without clinical-grade methods transparency. Optimization framing applied where clinical language would be more accurate.
+
+**Active ingredients:** CGM hardware and glucose-variability awareness.
+
+**Also contains:** optimization-culture identity, dashboard dependency, biohacker community membership.
+
+**Signal-catalog highlights:**
+- `quantified-outcome-without-methods` fires on the 81% / prediabetes-reversal claims
+- `inverse:over-precise-statistics` fires
+- `cultural-trend:*` — CGM-for-non-diabetics is an active commercial trend (4–6 range)
+- `consumer:burden-incompatible-chronic-illness` does NOT fire (target population is biohacker self-optimizer, not chronic-illness — appropriate scope)
+
+**Watch in OpenLabel framing:** D9c scope honesty is a 3 — offering is calibrated for biohacker self-optimizers but is sold as more universally applicable.
+
+**Verdict:** Flag
+
+---
+
+## Eight Sleep — Score 3–4 anchor (real mechanism, broad claim-surfacing)
+
+**What it is:** Active-cooling/heating mattress system with HRV / sleep / recovery tracking and AI interpretation. Premium hardware plus subscription.
+
+**Why it anchors here:** bed-surface thermoregulation is a real and plausible mechanism with at least one peer-reviewed product-adjacent paper. But "clinically proven," "every night," and broad performance / recovery / cardiovascular language overstates what a small, company-funded, short-duration study can justify. Heavy testimonial / celebrity / influencer architecture. Subscription dependence with proprietary AI scoring layer.
+
+**Active ingredients:** active mattress thermoregulation. Real and plausibly effective for comfort and sleep onset.
+
+**Also contains:** optimization-culture identity, performance-tracking dependency, AI-interpretation black box, status / luxury signaling.
+
+**Signal-catalog highlights:**
+- `clinical-language-without-rct` fires
+- `tactic:social-proof-without-methodology` fires
+- `tactic:future-faking` fires
+- `tactic:authority-without-verification` fires (celebrity / influencer architecture)
+- `tactic:narrative-transportation` fires
+- D4 conviviality at 4 (low autonomous health agency built; AI-interpretation black box concentrates power)
+- `consumer:cost-active-ingredient-asymmetric` — comfort-grade benefit at premium price
+
+**Verdict:** Caution. *Worth noting — the science is not fake; the product likely helps many people. The label should reflect that. The criticism is the gap between modest evidence and broad claim-surfacing.*
+
+---
+
+## Superpower — Disqualify anchor (real diagnostic substrate, inflated commercial story)
+
+**What it is:** Concierge biomarker testing platform with broad disease-detection / longevity / biological-age framing. "100+ biomarkers," "early signs of 1,000+ conditions," member-outcome statistics, physician/influencer endorsement architecture.
+
+**Why it anchors at Disqualify:** underlying components (laboratory testing, biomarker measurement, clinician interpretation) are real and have legitimate uses. But the product-level thesis — early detection, longevity optimization, biological-age management, root-cause clarity from broad biomarker panels — extends well beyond what the science supports. Active Lanham Act false-advertising suit on biomarker count and support model. Heavy rescue-narrative testimonial use, grievance-with-mainstream-medicine framing, optimization futurism.
+
+**Active ingredients:** laboratory blood draws and biomarker panel results. Clinician interpretation.
+
+**Also contains:** identity capture around longevity / optimization, rescue narrative replacing relationship with mainstream medicine, dashboard / score / "your biological age" psychological hooks, biomarker-anxiety-driven upsell pathways.
+
+**Signal-catalog highlights:**
+- `mechanism-overclaim` fires (broad detection claims from biomarker panels)
+- `tactic:grief-frustration-mining` fires (anti-mainstream-medicine rescue narrative)
+- `tactic:parasocial-influencer-endorsement` fires
+- `tactic:reciprocity-negative-option` fires (subscription concierge with retention friction)
+- `arbitrage:enforcement-history-present` fires (Lanham Act litigation)
+- `cultural-trend:*` aggregate at 7+ (peak capitalization in the longevity / personalized-diagnostics category)
+
+**OpenLabel-native note:** the case to point at when explaining why "real diagnostic substrate" is not enough. The label-format framing is especially clarifying here: the Active Ingredients line is "lab tests and clinician interpretation"; the Also Contains line carries the actual commercial story.
+
+**Verdict:** Disqualify
+
+---
+
+## Neuronic (Neuradiant 1070 Helmet) — Disqualify anchor + chronic-illness-population stress test
+
+**What it is:** $3,000 photobiomodulation helmet (LED-based) marketed for autonomic dysfunction in POTS / MCAS / hEDS. Single-testimonial-driven marketing. Wellness-classification regulatory positioning.
+
+**Why it anchors at Disqualify:** PBM at therapeutic doses in controlled clinical settings has an emerging evidence base. The Henderson (2024) analysis demonstrates that low-power LED devices likely cannot deliver sufficient fluence through scalp and skull to brain tissue — the mechanism is plausible in principle, but **the product as sold cannot deliver it**. Single testimonial as primary evidence. Implicit disease-treatment claims through narrative while maintaining wellness classification. Targets a population with limited conventional options and high desperation.
+
+**Active ingredients:** sub-therapeutic dose of red / near-IR LED exposure to the scalp. Mechanism does not plausibly reach the target tissue at this device's specifications.
+
+**Also contains:** hope; permission to act on chronic illness; identity reinforcement around the cosmology of "autonomic dysfunction is the root cause and PBM is the answer"; community membership through the testimonial subject's narrative arc; ritual structure.
+
+**Signal-catalog highlights:**
+- `mechanism-overclaim` fires (delivery rating "cannot-deliver" per Henderson 2024)
+- `tactic:testimonial-as-mechanism-proof` fires
+- `tactic:cognitive-load-distress-state-targeting` fires (chronic-illness population targeting)
+- `arbitrage:wellness-classification-disease-claims` fires (disqualifier)
+- `consumer:cost-monetizes-desperation` fires
+- `phenomenological-colonization` fires
+- `register:exploitation-with-targeting` — high-confidence detection (Conformist regression targeting via Expert-language wrap)
+
+**Tone calibration use — most important case in the library.** This is where OpenLabel's tone has to be perfect. The patient who paid $3,000 is real, exhausted, and may have actually felt better. **They did not become wrong about feeling better.** The audit names the gap between what the device can do (probably very little, mechanistically) and what the patient experienced (potentially real benefit through hope, ritual, agency restoration, expectancy). The label format makes this honest without being cruel.
+
+This is also the case where the **D8 register exploitation framing** is most important internally and **most carefully translated externally**. Founder is sincere — Expert-Pluralist register, genuine belief. Marketing-business apparatus reaches the population at Conformist regression state. The pattern is what's predatory, not the founder's intent. Internal language captures this; external language describes the dynamic without character-assassinating the founder.
+
+**Verdict:** Disqualify
+
+---
+
+## Industry context — what these anchors imply at population scale
+
+The seven anchor cases represent points on a continuum. The **chronic illness corpus** (Neuronic-shaped offerings) is qualitatively different from the **biohacker corpus** (Levels-shaped offerings) and the **clinical-evidence corpus** (Virta- and MAPS-shaped offerings).
+
+Aggregate research findings (`references/literature-review.md` §3) confirm the corpus-level patterns:
+
+- **Long COVID predatory marketing** is now a documented public-health concern. Brennan et al. 2023 (BMJ) identified >200 distinct unproven Long COVID treatments marketed online with no RCT evidence, often $500–$5,000 OOP. Neuronic-shaped offerings are a sub-segment of this larger pattern.
+- **Treatment-delay risk** for cancer-adjacent and serious-condition offerings is well-documented. Johnson et al. 2018 (JNCI) — patients using complementary medicine alone had 2.5x mortality vs. conventional treatment. Anchors in this category trigger `consumer:safety-treatment-delay-risk`.
+- **Supplement label inaccuracy** is the industry baseline: 59% of herbal supplements contained DNA from plants not on labels (Newmaster 2013, BMC Medicine); only 21% of herbal supplements at major retailers contained DNA from plants on labels (NY AG 2015). Anchors in the supplement category should be calibrated against this base rate.
+- **Third-party certification penetration is <1% of supplements** (USP-verified). Presence of S-301 (`third-party-certification-present`) is a strong positive signal precisely because it is rare.
+- **Adulteration-prone categories** (sexual enhancement, weight loss, muscle building) account for 98% of pharma-adulteration cases (Tucker et al. 2018, JAMA Network Open). Anchors in these categories should auto-elevate `consumer:safety-undisclosed-contraindications` scrutiny.
+
+These industry data points are not anchor cases themselves; they are the empirical backdrop against which anchor cases should be interpreted.
+
+---
+
+## Anchor-coverage gaps (calibration cases needed)
+
+The seven cases above cover several important patterns but not all. Specific gaps to fill in upcoming audit work:
+
+- **Peptides / GLP-1 microdosing** — high cultural-trend score, regulatory ambiguity, novel-substance category. Pick a representative case.
+- **Honest chronic-illness offering at Surface or Flag** — to balance Neuronic and prove the framework can recognize honest offerings to this population.
+- **Traditional-practice commercialization** (yoga / Ayurvedic / TCM / breathwork product) — to calibrate the cultural-trend layer's "re-emergent traditional practice" edge case.
+- **Condition-specific app or wearable with thin evidence** — to calibrate Data Rights and Practical Burden layers.
+- **Diagnostic-only offering with no claimed treatment** — to test how the framework handles offerings whose primary product is information.
+- **Free or community-based offering** (subreddit, peer-support program, open-source protocol) — to test the framework on Alternative Comparison anchors that should sit alongside paid offerings.
+- **MLM-wellness offering** — to calibrate `tactic:loss-aversion-sunk-cost` and compensation-structure analysis.
+- **Subscription-trap offering** triggering `tactic:reciprocity-negative-option` strongly — calibrate that newly-added signal.
+
+When these audits run, append entries below.
+
+---
+
+## Anchor-entry template
+
+For new anchor cases, use this structure:
+
+```markdown
+## [Offering Name] — [Verdict] anchor / [pattern type]
+
+**What it is:** [1–2 sentences on category, mechanism, business model]
+
+**Why it anchors here:** [1 paragraph]
+
+**Active ingredients:** [OpenLabel-frame: what it actually does]
+
+**Also contains:** [non-active layers being sold]
+
+**Signal-catalog highlights:**
+- [Notable signals firing with severity and reasoning]
+
+**Industry context citation:** [if applicable, link to literature-review.md statistic]
+
+**Tone calibration use:** [what this case teaches about how to phrase similar audits]
+
+**Verdict:** [Surface / Flag / Caution / Disqualify]
+**MI score:** [N.NN]
+**Methodology version at canonical audit:** v[N.N.N]
+```
+
+---
+
+*This is a living calibration document. Add entries after each completed audit. When a new entry stretches the framework or reveals a pattern the existing dimensions don't catch, flag it — that is the trigger for a methodology update.*

@@ -1,0 +1,55 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Agent / tool working directories
+.claude/
+.codex-*
+
+# Local references — preserved locally, kept out of repo
+# legacy/ contains pre-OpenLabel framework material with personal context
+# references/PatientPunk/ is a local copy of github.com/Ely-S/PatientPunk;
+#   see references/PATIENTPUNK_REFERENCE.md for what we extracted.
+legacy/
+references/PatientPunk/
+
+# Personal / sensitive
+*.private.md
+.env
+.env.local
+.env.*.local
+
+# Build / temp
+.tmp/
+*.tmp
+*.bak
+
+# Python (for any future runtime code)
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.pytest_cache/
+
+# Node (for any future tooling)
+node_modules/
+npm-debug.log*
+
+# Local databases (when runtime exists)
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
