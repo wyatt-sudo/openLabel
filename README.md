@@ -32,6 +32,7 @@ For a new contributor or for the agent loading context, read in this order:
 
 Plus:
 
+- [`STATE.md`](STATE.md) — **living document** capturing current state, recent decisions, and immediate next work. Read right after this README to get the live status. Updated as work proceeds.
 - [`references/literature-review.md`](references/literature-review.md) — synthesized findings from research: trust signals & disclaimers, manipulation tactics, industry composition / harm / enforcement, existing aggregation efforts. Citation-rich; informs catalog and evaluation rules.
 - [`references/PATIENTPUNK_REFERENCE.md`](references/PATIENTPUNK_REFERENCE.md) — what we learned from PatientPunk (github.com/Ely-S/PatientPunk) and how those patterns landed in our architecture.
 
