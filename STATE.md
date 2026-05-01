@@ -29,6 +29,12 @@ Division is loose — either can do anything; each leans toward the labels above
 
 ## Recent state changes
 
+### 2026-05-01 — methodology validation roadmap added
+- Reviewed Patient Punk's "Aggregated Online Treatment Reports as Predictors of Clinical Trial Outcomes" paper.
+- Added `13-methodology-validation-roadmap.md` to translate Patient Punk's validation pattern into OpenLabel lanes: claim extraction, risk categorization, evidence retrieval / matching, signal detection, score conversion, tone, patient signal, and context layers.
+- Clearest next step identified: build a small Mode 1 claim-substantiation validation harness using the seven anchors before broad product buildout.
+- Immediate next work reordered so validation fixtures come before YAML catalog conversion and full MVP implementation.
+
 ### 2026-04-30 — GitHub remote connected; initial commit pushed
 - Local repo uses the personal GitHub SSH alias `github.com-wyatt-sudo`.
 - `main` pushed to `github.com/wyatt-sudo/openLabel` and tracks `origin/main`.
@@ -81,15 +87,19 @@ Division is loose — either can do anything; each leans toward the labels above
 
 ## Immediate next work
 
-### 1. YAML form of signal catalog
+### 1. Mode 1 claim-substantiation validation harness
+
+Create `validation/anchors/` fixtures for the seven anchors. Start with one central high-risk claim per anchor, expected source queries, expected evidence-support label, core detections, verdict tier, and confidence. This validates the load-bearing audit core before broad product buildout.
+
+### 2. YAML form of signal catalog
 
 Currently the catalog lives in `06-signal-catalog.md` as structured markdown. Target is a YAML/JSON catalog file that the agent loads directly. Conversion is mechanical once the schema is final.
 
-### 2. Phase 1 MVP — Rapid Triage build
+### 3. Phase 1 MVP — Rapid Triage build
 
 Per `01-scope.md` MVP sequence. Smallest viable agent pipeline: Orchestrator + Crawler + 4 source-querier workers (PubMed, FDA, FTC, ClinicalTrials) + 4 signal-detector workers (tactics, inverse-trust, claim-substantiation, regulatory-arbitrage) + Scorer + Composer. SQLite. Tone-calibration service. Latency target 30–60s.
 
-### 3. Runtime anchor rerun once MVP infrastructure exists
+### 4. Runtime anchor rerun once MVP infrastructure exists
 
 The manual v2.2 rerun is documented. Once the audit pipeline and database are available, rerun all seven anchors as persisted `audit_runs` so `anchor_drift` can compare frozen v1 / v2.2 outputs.
 

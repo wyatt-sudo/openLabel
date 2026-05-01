@@ -29,6 +29,7 @@ For a new contributor or for the agent loading context, read in this order:
 | [`10-anchor-library.md`](10-anchor-library.md) | Calibration cases (MAPS, Virta, HeartMath, Levels, Eight Sleep, Superpower, Neuronic) | Calibration; methodology QA |
 | [`11-aggregate-research-and-analytics.md`](11-aggregate-research-and-analytics.md) | The industry research instrument — aggregate views, publication formats, incentive-structure speculation | Product 2 |
 | [`12-pipeline-architecture.md`](12-pipeline-architecture.md) | Orchestrator + workers + cadence + shared services. Worker contract, failure modes, migration triggers | Anyone implementing the runtime |
+| [`13-methodology-validation-roadmap.md`](13-methodology-validation-roadmap.md) | Validation lanes, Patient Punk lessons, and the first claim-substantiation harness | Before MVP build / methodology QA |
 
 Plus:
 
@@ -55,6 +56,7 @@ OpenLabel/
 ├── 10-anchor-library.md
 ├── 11-aggregate-research-and-analytics.md
 ├── 12-pipeline-architecture.md
+├── 13-methodology-validation-roadmap.md
 └── references/
     ├── literature-review.md                   ← compiled academic findings
     └── PATIENTPUNK_REFERENCE.md               ← architecture lessons + repo URL
@@ -70,6 +72,7 @@ OpenLabel/
 | Literature integration in catalog | Complete (`06-signal-catalog.md`) |
 | Aggregate research instrument specified | Complete (`11-aggregate-research-and-analytics.md`) |
 | Pipeline architecture documented | Complete (`12-pipeline-architecture.md`) |
+| Methodology validation roadmap | Complete (`13-methodology-validation-roadmap.md`) |
 | Mode 1 MVP build | Pre-build (Phase 1 of `01-scope.md`) |
 | Cultural-trend layer calibration against anchors | First-pass + v2.2 manual rerun complete (`10-anchor-library.md`) |
 | Patient Punk integration | Pending (Eli Sakov outreach initiated 2026-04-29) |
