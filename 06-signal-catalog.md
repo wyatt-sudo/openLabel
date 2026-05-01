@@ -402,6 +402,8 @@ Deliberate targeting of regression state with evidence of intent. Composite sign
 
 The four trend-layer sub-signals as individual catalog entries.
 
+**Anchor calibration v2.2:** MAPS and Virta are the negative controls: long evidence arcs, low saturation pressure, and patient / clinical precedence before major commercialization. HeartMath, Levels, and Eight Sleep are active-trend controls where the signal should elevate scrutiny without collapsing into Disqualify. Superpower is the peak-capitalization control: trend score should be high enough to color the whole audit because longevity / personalized-diagnostics hype expands the product thesis. Neuronic is the chronic-illness trend control: patient-community precedence may be present, but it does not offset disease-claim arbitrage, weak product delivery, or desperation targeting.
+
 ## `cultural-trend:commercial-velocity`
 Compare PubMed earliest-pub-date for core mechanism vs. company founding date. 0–3 score. Dimension: cultural-trend.
 
@@ -483,6 +485,8 @@ Offering's actual best-fit population is narrow but marketing addresses everyone
 
 Consolidated cluster of business-side signals that materially affect consumer outcomes. These were thinly distributed across other signals in v1; the cluster makes them legible. **Surface in Mode 2 full audit and Mode 3 company portal as a "Business Health" panel.** Do not enter Tier-A composite directly but can trigger threshold disqualifiers.
 
+**Anchor calibration v2.2:** Treat this cluster as a consumer-continuity and incentive-risk layer, not as a generic startup-quality score. MAPS and Virta may carry ordinary financing / regulatory risk without consumer exploitation. Levels, Eight Sleep, and Superpower should surface investor-pressure, subscription-continuity, pricing, privacy, and exit-pathway questions. Neuronic demonstrates that small-company business risk can become consumer harm when high price, thin evidence, and chronic-illness targeting converge. HeartMath primarily calibrates unit-economics asymmetry and certification / community economics rather than venture-capital pressure.
+
 ## `business:capital-runway-risk`
 
 Estimated runway is short relative to the customer relationship the offering implies. Subscription / device / coaching offerings depend on the company's continued existence; if runway is tight, the consumer carries that risk.
@@ -550,6 +554,8 @@ Bridge rounds, down rounds, structured debt in startup context, unusual financin
 
 MLM wellness has a recognizable structural signature distinct from generic dependency marketing. Worth its own cluster because the consumer is being recruited as much as sold to.
 
+**Anchor calibration v2.2:** None of the current seven anchors are MLM-positive. They therefore serve as negative controls: subscription, certification, influencer, ambassador, or community language must not trigger this cluster unless compensation depends on recruiting / downline economics or distributor inventory incentives. HeartMath can resemble MLM at the edge because of certification community dynamics, but should not fire `mlm:*` absent hierarchical compensation. Superpower / Eight Sleep influencer programs should stay in tactic and business-health signals unless distributor recruitment is present. Neuronic remains a chronic-illness exploitation anchor, not an MLM anchor.
+
 ## `mlm:hierarchical-compensation`
 
 Compensation depends on recruiting others into the same selling structure (downline), not just selling product.
@@ -596,6 +602,8 @@ Composite — combines hierarchical compensation + wellness-category products + 
 # 13. Self-Determination Theory layer (Conviviality complement)
 
 Empirically-grounded complement to D4 Conviviality, especially load-bearing for chronic-illness contexts where SDT has decades of RCT evidence on outcomes. Three needs (autonomy, competence, relatedness) parallel D4 sub-patterns with stronger empirical foundation.
+
+**Anchor calibration v2.2:** MAPS and Virta are positive controls for autonomy-supportive, competence-building intervention design, even where expert guidance is substantial. HeartMath should flag mild competence / relatedness displacement when proprietary cosmology or certification identity becomes the product. Levels and Eight Sleep calibrate dashboard dependency: SDT signals should rise when interpretation migrates from user learning to proprietary scoring. Superpower calibrates autonomy erosion through rescue-narrative biomarker interpretation. Neuronic calibrates the high-severity chronic-illness case: hope, community, and ritual may restore agency phenomenologically, while the commercial thesis can still displace autonomous care-seeking.
 
 ## `sdt:autonomy-violation`
 
@@ -745,6 +753,8 @@ Default: Cook-Greuter for the consumer-side analysis. Layer alternatives in Mode
 A core OpenLabel commitment: **thin evidence is not the same as misleading.** Many new offerings will inherently lack rigorous research — that makes them *more risky*, not ineffective or dishonest. The harm is in performing certainty unearned, not in being early. This signal cluster catches the difference.
 
 This cluster is the load-bearing apparatus for OpenLabel's "grey-area excellence" — generic LLMs handle established-evidence and obviously-fraudulent cases well; OpenLabel's distinctive value is in the middle, where these signals do the work.
+
+**Anchor calibration v2.2:** MAPS and Virta anchor "Established Evidence." HeartMath anchors the traditional / practice-maturity middle: some real practice and distributed refinement, but commercial cosmology can outpace what the evidence supports. Levels and Eight Sleep anchor "Pioneer with overclaim risk": plausible mechanisms and early evidence, but quantified / clinical language must be audited tightly. Superpower anchors "real substrate, unearned certainty": legitimate diagnostics do not justify broad longevity / disease-detection claims. Neuronic anchors the disqualifying inverse: thin evidence plus performed certainty plus implausible product delivery plus chronic-illness targeting.
 
 ## `evidence-stage:honest-pilot-framing`
 

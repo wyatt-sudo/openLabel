@@ -32,6 +32,30 @@ The anchors are queryable in the database (`anchor_cases` table with each case's
 
 ---
 
+## v2 signal-cluster calibration matrix
+
+This first-pass calibration maps the v2.2 clusters added after the original anchor audits. It is a drift-control aid, not a substitute for full reruns.
+
+| Offering | Cultural-trend calibration | Business-health calibration | MLM calibration | SDT calibration | Evidence-stage calibration |
+|---|---|---|---|---|---|
+| MAPS PBC | Established / patient-led precedent; low commercial-velocity concern. | Regulatory and financing risk exists, but not consumer-extraction risk by itself. | Negative control. | Autonomy-supportive protocol; competence and agency preserved. | Established Evidence; strong uncertainty-holding history. |
+| Virta Health | Established clinical category; low trend-hype pressure relative to evidence. | Subscription-continuity risk is honest and clinically tied to maintenance. | Negative control. | Coaching can build competence when framed as skill acquisition. | Established Evidence; ongoing publication culture. |
+| HeartMath | Active-trend / re-emergent practice edge case; avoid punishing practice maturity. | Certification and proprietary-wrapper economics are the key business questions. | Negative control unless downline compensation appears. | Mild competence / relatedness displacement through proprietary cosmology and certification identity. | Practice-maturity middle; not fake, but commercial claims outrun evidence. |
+| Levels Health | Active commercial trend in non-diabetic CGM. | Subscription, data, and investor-pressure questions matter; not disqualifying alone. | Negative control. | Dashboard dependency risk; competence-building depends on whether users learn transferable skills. | Pioneer / emerging evidence with overclaim risk. |
+| Eight Sleep | Active sleep-tech / recovery optimization trend. | Premium hardware, subscription continuity, AI interpretation, and exit/privacy risk matter. | Negative control. | Proprietary score and black-box interpretation can erode competence. | Plausible mechanism with clinical-language overreach. |
+| Superpower | Peak capitalization in longevity / personalized diagnostics. | Unit-economics, investor-pressure, litigation, privacy, and exit-pathway risks are central. | Negative control unless distributor recruitment appears. | Autonomy erosion via rescue narrative and biomarker anxiety loops. | Real diagnostic substrate plus unearned certainty. |
+| Neuronic | Active PBM/POTS/chronic-illness trend; patient precedence does not rescue the case. | High price + thin evidence + small-company continuity risk become consumer harm. | Negative control; chronic-illness exploitation is not MLM by default. | High-severity autonomy / competence risk despite possible felt agency restoration. | Thin evidence + performed certainty + implausible delivery + vulnerable-population targeting. |
+
+**Calibration decisions:**
+
+- MLM signals require compensation-structure evidence. Community, certification, affiliate, influencer, ambassador, or subscription language is insufficient on its own.
+- Business due-diligence signals should not punish ordinary startup risk. They matter when capital pressure, continuity risk, pricing, data rights, or conflicts of interest change the consumer's expected harm profile.
+- Cultural-trend scores are context multipliers, not verdicts. Patient precedence is positive only when paired with plausible delivery, safety, and honest claim scope.
+- SDT signals should distinguish expert-supported agency from agency replacement. Coaching and protocols can be autonomy-supportive when they build durable user competence.
+- Evidence-stage tags should prevent two errors: over-penalizing honest early offerings and under-penalizing thin-evidence offerings that perform certainty.
+
+---
+
 ## MAPS PBC (Lykos Therapeutics) — primary positive anchor
 
 **What it is:** MDMA-assisted psychotherapy for treatment-resistant PTSD. Phase 3 clinical-trial program. FDA rejection (2024) with transparent response.

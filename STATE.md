@@ -8,7 +8,7 @@
 
 OpenLabel is a clarity instrument for navigating consumer health and wellness — a prescription-bottle-style audit tool plus an aggregate industry research instrument. Foundation v2.x complete; pre-build for the Mode 1 MVP.
 
-- **Repo:** private, planned remote `github.com/wyatt-sudo/openLabel` (push pending — see Immediate next work).
+- **Repo:** private remote `github.com/wyatt-sudo/openLabel`; `main` pushed and tracking `origin/main`.
 - **Local path:** `~/Code/openLabel`. Moved off Google Drive on 2026-04-30 because Drive's sync engine corrupts git `.git/` internals.
 - **Foundation version:** v2.2 (as of 2026-04-30).
 - **Methodology version:** v1.x (versioning lives in `methodology_versions` table per `03-data-model.md`; first formal semver bump happens at first audit run).
@@ -28,6 +28,17 @@ Division is loose — either can do anything; each leans toward the labels above
 ---
 
 ## Recent state changes
+
+### 2026-04-30 — GitHub remote connected; initial commit pushed
+- Local repo uses the personal GitHub SSH alias `github.com-wyatt-sudo`.
+- `main` pushed to `github.com/wyatt-sudo/openLabel` and tracks `origin/main`.
+- Initial commit author / committer normalized to `Wyatt Rodgers <wyatt.abr@gmail.com>`.
+- Local-only ignored paths remain untracked: `.claude/`, `legacy/`, `references/PatientPunk/`.
+
+### 2026-04-30 — first-pass anchor calibration for new signal clusters
+- `06-signal-catalog.md` now includes v2.2 anchor-calibration notes for §7 cultural trend, §11 business due diligence, §12 MLM, §13 SDT, and §19 Evidence-Stage Epistemic Integrity.
+- `10-anchor-library.md` now includes a v2 signal-cluster calibration matrix across MAPS, Virta, HeartMath, Levels, Eight Sleep, Superpower, and Neuronic.
+- Calibration decisions clarified: MLM requires compensation-structure evidence; business due-diligence is consumer-harm-relevant rather than generic startup scoring; cultural trend is a context multiplier; SDT distinguishes expert-supported agency from agency replacement; evidence-stage tags prevent both over-penalizing honest early offerings and under-penalizing unearned certainty.
 
 ### 2026-04-30 — project moved from Google Drive to local disk
 - Full content (279 files, excluding broken partial `.git/`) copied to `~/Code/openLabel`.
@@ -69,26 +80,15 @@ Division is loose — either can do anything; each leans toward the labels above
 
 ## Immediate next work
 
-### 1. Finish the GitHub push (highest priority)
+### 1. Formal anchor rerun under v2.2 calibration
 
-Pending. Codex's `git init` from inside the Drive folder hit a hidden-directory write block. Now that the project is on local disk, this should work cleanly.
+First-pass desk calibration is now documented in `06-signal-catalog.md` and `10-anchor-library.md`. Next step is a formal rerun of the seven anchors (MAPS, Virta, HeartMath, Levels, Eight Sleep, Superpower, Neuronic) using the v2.2 catalog to produce updated per-anchor scores, confidence, and drift notes.
 
-Steps:
-1. Open Codex pointed at `~/Code/openLabel`.
-2. Verify Codex has write access (Full Disk Access for Codex.app should already be granted from earlier macOS Privacy & Security step; if not, grant it).
-3. Have Codex run: `git init` → `git add .` (respects .gitignore) → `git commit -m "Initial OpenLabel foundation docs"` → `git branch -M main` → `git remote add origin git@github.com:wyatt-sudo/openLabel.git` → `git push -u origin main`.
-4. Confirm push succeeded; verify on github.com.
-5. Delete or rename Drive folder once verified.
-
-### 2. Calibrate the new signal clusters against anchor library
-
-The cultural-trend signals (`§7`), business-due-diligence cluster (`§11`), MLM cluster (`§12`), SDT layer (`§13`), and Evidence-Stage cluster (`§19`) all need first calibration runs against the existing anchors (MAPS, Virta, HeartMath, Levels, Eight Sleep, Superpower, Neuronic) before they're reliable for production audits. See `06-signal-catalog.md` notes within each cluster and `10-anchor-library.md` "Anchor-coverage gaps".
-
-### 3. YAML form of signal catalog
+### 2. YAML form of signal catalog
 
 Currently the catalog lives in `06-signal-catalog.md` as structured markdown. Target is a YAML/JSON catalog file that the agent loads directly. Conversion is mechanical once the schema is final.
 
-### 4. Phase 1 MVP — Rapid Triage build
+### 3. Phase 1 MVP — Rapid Triage build
 
 Per `01-scope.md` MVP sequence. Smallest viable agent pipeline: Orchestrator + Crawler + 4 source-querier workers (PubMed, FDA, FTC, ClinicalTrials) + 4 signal-detector workers (tactics, inverse-trust, claim-substantiation, regulatory-arbitrage) + Scorer + Composer. SQLite. Tone-calibration service. Latency target 30–60s.
 
