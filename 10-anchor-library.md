@@ -251,18 +251,51 @@ These industry data points are not anchor cases themselves; they are the empiric
 
 ## Anchor-coverage gaps (calibration cases needed)
 
-The seven cases above cover several important patterns but not all. Specific gaps to fill in upcoming audit work:
+The seven cases above cover the first score ladder, but they are thin on regulated-device positives, women's health, chronic-illness programs, charismatic retreat ecosystems, direct-selling wellness, mainstream supplements, and DTC biomarker interpretation. The next expansion should add structurally informative anchors rather than merely famous ones.
 
-- **Peptides / GLP-1 microdosing** — high cultural-trend score, regulatory ambiguity, novel-substance category. Pick a representative case.
-- **Honest chronic-illness offering at Surface or Flag** — to balance Neuronic and prove the framework can recognize honest offerings to this population.
-- **Traditional-practice commercialization** (yoga / Ayurvedic / TCM / breathwork product) — to calibrate the cultural-trend layer's "re-emergent traditional practice" edge case.
-- **Condition-specific app or wearable with thin evidence** — to calibrate Data Rights and Practical Burden layers.
-- **Diagnostic-only offering with no claimed treatment** — to test how the framework handles offerings whose primary product is information.
-- **Free or community-based offering** (subreddit, peer-support program, open-source protocol) — to test the framework on Alternative Comparison anchors that should sit alongside paid offerings.
-- **MLM-wellness offering** — to calibrate `tactic:loss-aversion-sunk-cost` and compensation-structure analysis.
-- **Subscription-trap offering** triggering `tactic:reciprocity-negative-option` strongly — calibrate that newly-added signal.
+### Anchor Expansion v1 candidates
 
-When these audits run, append entries below.
+| Candidate | Category | Calibration role | Expected posture |
+|---|---|---|---|
+| **Dexcom G7** | Regulated CGM / medical device | Highest-integrity device ceiling; distinguishes FDA-cleared indication from wellness repurposing. | Positive |
+| **Oura Ring** | Consumer wearable | Mainstream wearable with real validation plus readiness / fertility / longevity claim-creep risk. | Grey-positive |
+| **Apollo Neuro** | Stress / nervous-system wearable | Honest early-stage device; tests whether low-N evidence is penalized fairly when claims are hedged. | Grey-positive |
+| **Natural Cycles** | Women's health / fertility app | Regulated high-stakes app; calibrates FDA posture, efficacy disclosure, and user-error boundary. | Positive |
+| **Midi Health** | Menopause telehealth | Positive remote-care anchor for evidence-based women's health and hormone-care delivery. | Positive |
+| **Equip** | Eating-disorder telehealth | Positive high-complexity clinical-care anchor; tests remote care in a serious condition. | Positive |
+| **Primal Trust** | Chronic-illness nervous-system program | Grey-zone chronic-illness program with hope, community, somatic practice, and broad applicability claims. | Grey / Flag |
+| **Gupta Program or DNRS** | Brain-retraining / limbic retraining | Older chronic-illness brain-retraining comparator; calibrates psychogenic-framing and medical-gaslighting risk. | Grey / Caution |
+| **Joe Dispenza** | Meditation / retreat / spiritual healing | Charismatic retreat ecosystem; testimonial healing and neuroscience-flavored spirituality. | Caution / Negative |
+| **Healy** | Frequency device / direct selling | Frequency-device negative stress test with weak mechanism, distributor channels, and regulatory scrutiny. | Negative |
+| **doTERRA or Young Living** | Essential oils / MLM | Canonical wellness MLM and distributor disease-claim structure. | Negative |
+| **AG1** | Influencer supplement | Podcast / influencer supplement grey zone: real ingredients, proprietary blends, broad implied benefits. | Grey / Caution |
+| **Seed or Thorne** | Science-forward supplement | Positive supplement contrast against AG1 / MLM / Goop-style claim drift. | Grey-positive |
+| **Function Health or InsideTracker** | DTC biomarkers / longevity | Biomarker interpretation, panel breadth, clinical utility, and data-rights risk. | Grey |
+| **Tally Health** | Epigenetic age / longevity | Academic-authority paradox; real clocks, weak clinical actionability, longevity claim pressure. | Caution |
+| **BetterHelp or Cerebral** | Digital mental health / telehealth | Platform-level failure mode where evidence-based ingredients can be degraded by acquisition, privacy, or prescribing incentives. | Caution / Negative |
+| **Waking Up or Headspace** | Meditation / mental wellness | Positive non-clinical or evidence-generating mental wellness app; contrast with Dispenza. | Positive |
+| **Enagic / Kangen Water or BEMER** | Wellness device / MLM | Expensive wellness-device MLM; calibrates device claims plus compensation structure. | Negative |
+
+### First validation expansion set
+
+For the Mode 1 claim-substantiation harness, expand from seven to twelve anchors:
+
+1. MAPS PBC
+2. Virta Health
+3. Oura Ring
+4. Apollo Neuro
+5. Primal Trust
+6. Joe Dispenza
+7. Healy
+8. doTERRA or Young Living
+9. AG1
+10. Function Health or InsideTracker
+11. Natural Cycles
+12. Neuronic
+
+This set gives the first harness a balanced spread: clinical evidence ceiling, digital / device positives, honest early-stage, chronic-illness grey zone, charismatic healing, frequency-device negative, MLM negative, supplement influencer grey zone, biomarker interpretation, women's-health regulatory positive, and chronic-illness predation stress test.
+
+When these audits run, promote selected candidates into full anchor entries below using the template.
 
 ---
 

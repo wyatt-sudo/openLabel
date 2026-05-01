@@ -32,8 +32,13 @@ Division is loose — either can do anything; each leans toward the labels above
 ### 2026-05-01 — methodology validation roadmap added
 - Reviewed Patient Punk's "Aggregated Online Treatment Reports as Predictors of Clinical Trial Outcomes" paper.
 - Added `13-methodology-validation-roadmap.md` to translate Patient Punk's validation pattern into OpenLabel lanes: claim extraction, risk categorization, evidence retrieval / matching, signal detection, score conversion, tone, patient signal, and context layers.
-- Clearest next step identified: build a small Mode 1 claim-substantiation validation harness using the seven anchors before broad product buildout.
+- Clearest next step identified: build a small Mode 1 claim-substantiation validation harness before broad product buildout.
 - Immediate next work reordered so validation fixtures come before YAML catalog conversion and full MVP implementation.
+
+### 2026-05-01 — expanded anchor slate selected
+- Added Anchor Expansion v1 candidates to `10-anchor-library.md`, informed by external blind anchor lists and project-specific coverage needs.
+- First validation set expanded to 12 anchors: MAPS, Virta, Oura, Apollo Neuro, Primal Trust, Joe Dispenza, Healy, doTERRA/Young Living, AG1, Function Health/InsideTracker, Natural Cycles, and Neuronic.
+- Validation roadmap updated: first harness target is now 10 / 12 expected verdict-tier preservation and 10 / 12 correct central-claim support classification.
 
 ### 2026-04-30 — GitHub remote connected; initial commit pushed
 - Local repo uses the personal GitHub SSH alias `github.com-wyatt-sudo`.
@@ -89,7 +94,7 @@ Division is loose — either can do anything; each leans toward the labels above
 
 ### 1. Mode 1 claim-substantiation validation harness
 
-Create `validation/anchors/` fixtures for the seven anchors. Start with one central high-risk claim per anchor, expected source queries, expected evidence-support label, core detections, verdict tier, and confidence. This validates the load-bearing audit core before broad product buildout.
+Create `validation/anchors/` fixtures for the 12-anchor validation set. Start with one central high-risk claim per anchor, expected source queries, expected evidence-support label, core detections, verdict tier, and confidence. This validates the load-bearing audit core before broad product buildout.
 
 ### 2. YAML form of signal catalog
 

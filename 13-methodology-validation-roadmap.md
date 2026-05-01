@@ -53,7 +53,7 @@ This is the right first target because:
 - It is already in the MVP scope.
 - It creates reusable infrastructure for every later facet: fixtures, expected outputs, source coverage, confidence labels, and anchor drift.
 
-The first harness should run on the seven anchor cases already in `10-anchor-library.md`.
+The first harness should run on a deliberately mixed 12-anchor set: the strongest original anchors plus expansion candidates that cover regulated-device positives, honest early-stage devices, chronic-illness grey zones, charismatic healing, MLM / frequency-device negatives, supplement marketing, biomarker interpretation, and women's-health regulation.
 
 For each anchor, create a fixture with:
 
@@ -67,7 +67,7 @@ For each anchor, create a fixture with:
 
 The first measurable goal:
 
-> On the seven anchors, Mode 1 should preserve all canonical verdict tiers and correctly classify the support status of the highest-risk central claim for at least 6 / 7 anchors.
+> On the 12-anchor validation set, Mode 1 should preserve expected verdict tier for at least 10 / 12 anchors and correctly classify the support status of the highest-risk central claim for at least 10 / 12 anchors.
 
 This is intentionally small. It avoids pretending OpenLabel is validated because one polished audit reads well.
 
@@ -107,10 +107,15 @@ validation/
   anchors/
     maps-pbc.yaml
     virta-health.yaml
-    heartmath.yaml
-    levels-health.yaml
-    eight-sleep.yaml
-    superpower.yaml
+    oura-ring.yaml
+    apollo-neuro.yaml
+    primal-trust.yaml
+    joe-dispenza.yaml
+    healy.yaml
+    doterra-or-young-living.yaml
+    ag1.yaml
+    function-health-or-insidetracker.yaml
+    natural-cycles.yaml
     neuronic.yaml
   expected/
     mode1-claim-substantiation.yaml
@@ -118,6 +123,19 @@ validation/
 ```
 
 This is not busywork. It is how OpenLabel avoids becoming a convincing prose generator with unmeasured reliability.
+
+### Why these twelve
+
+The first validation set should not be only the original score ladder. It should include enough adjacent cases to catch false positives and unfair penalties:
+
+- **MAPS PBC / Virta Health** — established-evidence positives.
+- **Oura Ring / Apollo Neuro** — validated wearable and honest early-stage wearable.
+- **Primal Trust / Neuronic** — chronic-illness grey-zone vs chronic-illness predation stress test.
+- **Joe Dispenza** — charismatic retreat / testimonial-healing stress test.
+- **Healy / doTERRA or Young Living** — frequency-device and MLM negative controls.
+- **AG1** — influencer supplement grey zone.
+- **Function Health or InsideTracker** — DTC biomarker interpretation and clinical-utility risk.
+- **Natural Cycles** — regulated women's-health app with high-stakes efficacy disclosure.
 
 ---
 
