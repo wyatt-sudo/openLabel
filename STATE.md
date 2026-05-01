@@ -39,6 +39,7 @@ Division is loose — either can do anything; each leans toward the labels above
 - `06-signal-catalog.md` now includes v2.2 anchor-calibration notes for §7 cultural trend, §11 business due diligence, §12 MLM, §13 SDT, and §19 Evidence-Stage Epistemic Integrity.
 - `10-anchor-library.md` now includes a v2 signal-cluster calibration matrix across MAPS, Virta, HeartMath, Levels, Eight Sleep, Superpower, and Neuronic.
 - Calibration decisions clarified: MLM requires compensation-structure evidence; business due-diligence is consumer-harm-relevant rather than generic startup scoring; cultural trend is a context multiplier; SDT distinguishes expert-supported agency from agency replacement; evidence-stage tags prevent both over-penalizing honest early offerings and under-penalizing unearned certainty.
+- Follow-up manual v2.2 rerun added to `10-anchor-library.md`: all 7 anchors preserve canonical verdict tier; score drift is small and intentional; runtime/database rerun remains future work once the audit pipeline exists.
 
 ### 2026-04-30 — project moved from Google Drive to local disk
 - Full content (279 files, excluding broken partial `.git/`) copied to `~/Code/openLabel`.
@@ -80,17 +81,17 @@ Division is loose — either can do anything; each leans toward the labels above
 
 ## Immediate next work
 
-### 1. Formal anchor rerun under v2.2 calibration
-
-First-pass desk calibration is now documented in `06-signal-catalog.md` and `10-anchor-library.md`. Next step is a formal rerun of the seven anchors (MAPS, Virta, HeartMath, Levels, Eight Sleep, Superpower, Neuronic) using the v2.2 catalog to produce updated per-anchor scores, confidence, and drift notes.
-
-### 2. YAML form of signal catalog
+### 1. YAML form of signal catalog
 
 Currently the catalog lives in `06-signal-catalog.md` as structured markdown. Target is a YAML/JSON catalog file that the agent loads directly. Conversion is mechanical once the schema is final.
 
-### 3. Phase 1 MVP — Rapid Triage build
+### 2. Phase 1 MVP — Rapid Triage build
 
 Per `01-scope.md` MVP sequence. Smallest viable agent pipeline: Orchestrator + Crawler + 4 source-querier workers (PubMed, FDA, FTC, ClinicalTrials) + 4 signal-detector workers (tactics, inverse-trust, claim-substantiation, regulatory-arbitrage) + Scorer + Composer. SQLite. Tone-calibration service. Latency target 30–60s.
+
+### 3. Runtime anchor rerun once MVP infrastructure exists
+
+The manual v2.2 rerun is documented. Once the audit pipeline and database are available, rerun all seven anchors as persisted `audit_runs` so `anchor_drift` can compare frozen v1 / v2.2 outputs.
 
 ---
 

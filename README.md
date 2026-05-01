@@ -71,7 +71,7 @@ OpenLabel/
 | Aggregate research instrument specified | Complete (`11-aggregate-research-and-analytics.md`) |
 | Pipeline architecture documented | Complete (`12-pipeline-architecture.md`) |
 | Mode 1 MVP build | Pre-build (Phase 1 of `01-scope.md`) |
-| Cultural-trend layer calibration against anchors | Pending |
+| Cultural-trend layer calibration against anchors | First-pass + v2.2 manual rerun complete (`10-anchor-library.md`) |
 | Patient Punk integration | Pending (Eli Sakov outreach initiated 2026-04-29) |
 | YAML form of signal catalog | Not yet authored; markdown is current source of truth |
 

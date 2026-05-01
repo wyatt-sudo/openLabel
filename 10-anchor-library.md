@@ -28,7 +28,7 @@ The anchors are queryable in the database (`anchor_cases` table with each case's
 | Superpower | **Disqualify** | 4.05 | Disqualify anchor | 6–7 | Peak capitalization |
 | Neuronic | **Disqualify** | 4.0 | Disqualify anchor | 6–8 | Active trend (PBM/POTS) |
 
-*Tactic density and trend-layer figures are illustrative for the original audits and need formal recalibration under the v2 methodology and signal catalog.*
+*Tactic density and trend-layer figures are illustrative for the original audits. The v2.2 manual rerun below preserves these canonical verdicts and documents drift.*
 
 ---
 
@@ -53,6 +53,24 @@ This first-pass calibration maps the v2.2 clusters added after the original anch
 - Cultural-trend scores are context multipliers, not verdicts. Patient precedence is positive only when paired with plausible delivery, safety, and honest claim scope.
 - SDT signals should distinguish expert-supported agency from agency replacement. Coaching and protocols can be autonomy-supportive when they build durable user competence.
 - Evidence-stage tags should prevent two errors: over-penalizing honest early offerings and under-penalizing thin-evidence offerings that perform certainty.
+
+---
+
+## v2.2 manual anchor rerun
+
+Manual pre-runtime rerun against `06-signal-catalog.md` v2.2 and `07-evaluation-rules.md`. This is the methodology QA pass available before the audit pipeline exists; the database-backed rerun should preserve old / new `audit_run_id` pairs once runtime infrastructure is built.
+
+| Offering | v2.2 verdict tag | Prior MI | v2.2 MI | Drift | Confidence | Rerun note |
+|---|---|---:|---:|---:|---|---|
+| MAPS PBC | Surface — Established Evidence | 1.1 | 1.1 | 0.0 | High | New clusters are negative / positive controls: patient precedence, uncertainty-holding, and low tactic density preserve the score. |
+| Virta Health | Surface — Established Evidence | 1.4 | 1.4 | 0.0 | High | Subscription dependency remains a low-medium conviviality signal because it is clinically tied to maintenance and honestly framed. |
+| HeartMath | Flag — Distributed Refinement with Commercial Overreach | 2.4 | 2.45 | +0.05 | Medium | SDT and business-health notes add mild certification / proprietary-wrapper concern, while practice maturity prevents over-penalizing the category. |
+| Levels Health | Flag — Pioneer with Over-claiming | 2.9 | 2.95 | +0.05 | Medium | Evidence-stage tagging clarifies the case as emerging CGM biofeedback with quantified-outcome / scope overreach, not fraud. |
+| Eight Sleep | Caution — Pioneer with Over-claiming | 3.3 | 3.35 | +0.05 | Medium | SDT reinforces dashboard / AI-score dependency; evidence-stage remains plausible mechanism plus broad clinical-language overreach. |
+| Superpower | Disqualify — Real Substrate, Unearned Certainty | 4.05 | 4.2 | +0.15 | Medium | Evidence-stage and business-health layers strengthen the existing disqualify pattern without introducing an MLM false positive. |
+| Neuronic | Disqualify — Predatory Pre-RCT / Chronic-Illness Targeting | 4.0 | 4.25 | +0.25 | High | New SDT and evidence-stage distinctions sharpen the disqualifier: felt agency may be real, while the product thesis still performs unearned certainty around implausible delivery. |
+
+**Acceptance check:** 7 / 7 anchors preserve canonical verdict tier. Both Disqualify anchors remain at or above 4.0, and no case moves more than one verdict tier. The only upward movement is intentional: v2.2 makes SDT, evidence-stage, and business-health risks more legible where they were previously implicit.
 
 ---
 
