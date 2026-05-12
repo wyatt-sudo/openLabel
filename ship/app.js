@@ -22,8 +22,10 @@ const offerings = {
         "Use quantified stress and HRV findings as proof that the system works broadly.",
         "Let meditation difficulty become a problem solved by the device."
       ],
-      halfBaked:
-        "The offering has a real practice-support insight, but the public story inflates that insight into broad brain-tech certainty before the evidence trail catches up.",
+      translation:
+        "The interesting origin story is plausible: brainwave entrainment research, hypnosis, meditation, guided imagery, audiovisual stimulation, and newer excitement around rhythmic light all point toward a design space worth exploring. The question is not whether that inspiration is silly. The question is whether this particular device, protocol library, and subscription experience earn the claims attached to them.",
+      sales:
+        "Sells an app subscription plus premium headset, bundles, annual plans, and financing. The commercial center is not just guided practice; it is a proprietary tech object that makes rest feel productized, trackable, and easier to buy.",
       exchange:
         "Money, recurring attention, health hope, biometric/self-regulation trust, and possibly the belief that calm depends on a proprietary device."
     },
@@ -53,10 +55,10 @@ const offerings = {
         "Treat it as optional scaffolding. Do not treat it as the proprietary source of your nervous-system agency."
     },
     panels: [
-      ["Chronic Illness & Complex Symptoms", "State, rest, ritual, guided narrative, and expectation can matter. The risk is routing a vulnerable need through costly proprietary certainty."],
-      ["Curious Consumer", "It may be a reasonable relaxation experiment if you can afford it, pass safety screens, and compare it against cheaper guided practices."],
-      ["Frontier Health Optimizer", "Light, sound, HRV, sleep, attention, and neuroplasticity are real domains. The public bridge from those domains to broad transformation is not yet earned."],
-      ["Helpful Healer", "Frame it as possible relaxation support, not corrective brain treatment. Screen for photosensitivity and offer light-free alternatives."]
+      ["Chronic Illness & Complex Symptoms", "It makes sense that BrainTap would be compelling if you are tired, wired, foggy, underslept, or trying to calm a nervous system that has stopped feeling trustworthy. The healthy intuition here is that state matters: rest, rhythm, ritual, guided narrative, attention, and expectation can change how a body feels. The concern is not that those benefits are fake. It is that BrainTap routes those real needs through a costly proprietary brain-technology story whose broad neuroplasticity, performance, and wellness claims are stronger than the public evidence trail supports."],
+      ["Curious Consumer", "BrainTap may be reasonable as an expensive relaxation experiment if you can afford it, are not photosensitive or seizure-prone, and understand that the strongest support is for the practice container: guided relaxation, structured rest time, intention and expectancy support, and some binaural-beat or audiovisual state-cueing effects. The practical question is not simply whether it can make you feel calmer. It might. The practical question is whether the headset and subscription are worth more than lower-cost guided audio, meditation apps, CBT-I support, therapy, breathwork, yoga nidra, or ordinary headphones."],
+      ["Frontier Health Optimizer", "Your interest is not irrational. Light, sound, attention, HRV, sleep, ritual, expectation, and neuroplasticity are real domains, and mainstream care often underuses state-shifting tools. But frontier health still has to make contact with dose, endpoint, mechanism, comparator, and falsifiability. BrainTap asks you to accept many layers at once: proprietary neuro-algorithm, entrainment, neuroplasticity, auriculotherapy, energy dosing through eyes and ears, and broad performance benefits. Some of the experience may be directionally plausible; the certainty and price arrive before the evidence package is transparent enough to earn them."],
+      ["Helpful Healer", "If you are considering BrainTap for a client, patient, family member, or community member, frame it as a possible relaxation support, not as a corrective brain treatment. The safety issue is not theoretical: the company itself warns about rare blackouts or seizures with flashing lights and names epilepsy, light sensitivity, brain injury, strokes, aneurysm, and related conditions. A careful recommendation screens for photosensitivity and neurological risk, avoids disease-treatment language, avoids implying the device is necessary, and gives people cheaper light-free alternatives first."]
     ],
     agent: {
       flags:
@@ -104,8 +106,10 @@ const offerings = {
         "Use surveys, testimonials, and member experience to create proof-like momentum.",
         "Keep the user inside the app, device, program, and member ecology."
       ],
-      halfBaked:
-        "The honest ritual and pain-relief possibilities get stretched into a broad mechanism story about fields, frequencies, and serious health outcomes.",
+      translation:
+        "The inspiration may include real pain-device precedent, ritual attention, personal frequency metaphors, and the desire to make healing feel specific and responsive. The translation problem appears when this becomes a proprietary field-correction story with diagnostic flavor and serious-condition implications.",
+      sales:
+        "Sells through a device/app ecosystem and direct-selling/member ecology. That model can create community and support, but it also amplifies testimonials, social proof, and business-opportunity incentives around vulnerable health hopes.",
       exchange:
         "Money, health hope, trust in proprietary interpretation, social belonging, and increased exposure to salesforce claims."
     },
@@ -135,10 +139,10 @@ const offerings = {
         "Treat it as a bounded ritual or narrow pain-support experiment, not as a broad health authority."
     },
     panels: [
-      ["Chronic Illness & Complex Symptoms", "The danger is not that hope is fake. The danger is that serious uncertainty gets routed into expensive certainty and testimonial-driven disease narratives."],
-      ["Curious Consumer", "If you use it, keep expectations narrow and compare against cheaper pain and stress tools before buying into the full ecosystem."],
-      ["Frontier Health Optimizer", "The frontier signal is weak unless Healy can show mechanism, endpoint, dose, and product-specific outcomes beyond surveys and testimonials."],
-      ["Helpful Healer", "Do not recommend it as disease treatment. Separate ritual support from medical claims and screen for treatment-delay risk."]
+      ["Chronic Illness & Complex Symptoms", "The danger is not that hope is fake. Hope, ritual, attention, and pain relief can all matter. The danger is that serious uncertainty gets routed into expensive certainty and testimonial-driven disease narratives. If you are already exhausted by medical ambiguity, a device that appears to personalize invisible fields can feel deeply validating. OpenLabel's concern is that this validation may arrive attached to a mechanism story and sales ecology that outrun the evidence."],
+      ["Curious Consumer", "If you use Healy, keep expectations narrow. The pain-device substrate is different from the broader frequency-health ecosystem. Compare the cost against lower-cost TENS devices, clinician-guided pain care, meditation, breath pacing, HRV biofeedback, and nonproprietary routines before buying into the full device/app/community story."],
+      ["Frontier Health Optimizer", "The frontier question is not whether electromagnetic stimulation, placebo/expectancy, ritual, and personalized feedback can influence experience. They can. The question is whether Healy's specific IMF/bioenergetic programs demonstrate mechanism, dose, endpoint, and product-specific outcomes beyond surveys, testimonials, and salesforce narratives. On this pass, that evidentiary bridge was not visible."],
+      ["Helpful Healer", "Do not recommend Healy as disease treatment. Separate ritual support and narrow pain-relief use from broad medical claims. Screen for treatment-delay risk, financial vulnerability, implanted device concerns, serious illness, and medication-weaning narratives. The ethical recommendation is bounded, explicit, and alternative-aware."]
     ],
     agent: {
       flags:
@@ -186,8 +190,10 @@ const offerings = {
         "Let a broad nervous-system story explain many complex symptoms.",
         "Invite ongoing membership, levels, classes, study groups, and mentor ecology."
       ],
-      halfBaked:
-        "The skills and community container are plausible; the problem is when adjunct regulation becomes a master explanation for complex chronic disease.",
+      translation:
+        "The origin story is genuinely compelling: people with complex illness need pacing, nervous-system literacy, community, meaning, and practices that restore a sense of participation. The translation risk is not the presence of these tools; it is when an adjunct skills container becomes a master explanation for complex chronic disease.",
+      sales:
+        "Sells ongoing membership, levels, live classes, study groups, practitioner/mentor ecology, and belonging inside a branded healing path. The model can support consistency, but it can also make leaving feel like leaving the worldview that gave suffering coherence.",
       exchange:
         "Money, hope, attention, identity, community belonging, and trust in a branded explanatory path."
     },
@@ -217,10 +223,10 @@ const offerings = {
         "Use as one adjunct path. Keep pacing, biomedical red flags, and multiple explanations alive."
     },
     panels: [
-      ["Chronic Illness & Complex Symptoms", "The care container may be real, but vulnerable users need explicit boundaries so hope does not become self-blame or treatment delay."],
-      ["Curious Consumer", "This is less gadget and more skills community. The question is whether the claims and monthly commitment match your actual need."],
-      ["Frontier Health Optimizer", "Nervous-system regulation is a real domain, but broad disease effects need product-specific prospective evidence."],
-      ["Helpful Healer", "Frame it as adjunct skills/community support, not a substitute for medical evaluation or condition-specific care."]
+      ["Chronic Illness & Complex Symptoms", "The care container may be real. A structured community that teaches regulation, pacing-adjacent awareness, somatic skills, and hope can be meaningful when illness has made life small and confusing. The risk is not that regulation is irrelevant; it is that vulnerable users need explicit boundaries so hope does not become self-blame, treatment delay, or a single branded explanation for every symptom."],
+      ["Curious Consumer", "This is less gadget and more skills community. If you are looking for routine, language, community, and nervous-system practice, Primal Trust may offer something more substantial than a simple wellness app. The question is whether the claims, monthly commitment, and healing-path identity match your actual need, or whether a lower-cost therapy, pacing, patient community, or somatic practice would meet the same job with less worldview load."],
+      ["Frontier Health Optimizer", "Nervous-system regulation is a real domain, and the relationship between stress physiology, trauma, pain, sleep, and chronic symptoms is worth serious attention. But broad disease effects still need product-specific prospective evidence. The strongest version of this offering would treat regulation as one important layer, not as the master key that makes biomedical complexity secondary."],
+      ["Helpful Healer", "Frame Primal Trust as adjunct skills and community support, not a substitute for medical evaluation, pacing, or condition-specific care. It may help some people rebuild agency, routine, and emotional regulation. The recommendation becomes ethically fragile when it implies persistent symptoms reflect insufficient nervous-system work or when fit boundaries for PEM, trauma activation, psychiatric crisis, and neurodivergent sensitivity are not explicit."]
     ],
     agent: {
       flags:
@@ -307,7 +313,8 @@ function render(offering) {
   setText("current-seed", offering.currentSoul.seed);
   setText("current-purpose", offering.currentSoul.purpose);
   setList("current-instructions", offering.currentSoul.instructions);
-  setText("current-halfbaked", offering.currentSoul.halfBaked);
+  setText("current-translation", offering.currentSoul.translation);
+  setText("current-sales", offering.currentSoul.sales);
   setText("current-exchange", offering.currentSoul.exchange);
 
   setText("honest-purpose", offering.honestSoul.purpose);
