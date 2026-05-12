@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OpenLabel - Product Read</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="./" aria-label="OpenLabel home">
+          <span class="brand-mark">OpenLabel</span>
+          <span class="brand-line">Discernment for things being sold to your health.</span>
+        </a>
+        <nav class="nav" aria-label="Page sections">
+          <a href="#read">Read</a>
+          <a href="#soul">Soul</a>
+          <a href="#choices">Alternatives</a>
+          <a href="#evidence">Evidence</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="page-title">
+          <div class="hero-copy">
+            <p class="kicker">Paste the thing. Get the read.</p>
+            <h1 id="page-title">What is this offering really asking you to believe?</h1>
+            <p class="lede">OpenLabel turns health and wellness claims into a practical read: what may be real, what is overclaimed, what need is being served, and what would be a cleaner way to hold it.</p>
+          </div>
+
+          <section class="lookup-card" aria-label="Product lookup">
+            <label for="lookup">Product, URL, or claim</label>
+            <div class="lookup-row">
+              <input id="lookup" autocomplete="off" value="braintap.com" aria-describedby="lookup-help">
+              <button id="lookup-button" type="button">Read it</button>
+            </div>
+            <p id="lookup-help">Prototype mode: try BrainTap, Healy, Primal Trust, or paste anything to see the loop.</p>
+            <div class="sample-row" aria-label="Seeded examples">
+              <button class="sample-button" type="button" data-target="braintap">BrainTap</button>
+              <button class="sample-button" type="button" data-target="healy">Healy</button>
+              <button class="sample-button" type="button" data-target="primal-trust">Primal Trust</button>
+            </div>
+          </section>
+        </section>
+
+        <section class="result-shell" id="read" aria-live="polite">
+          <div class="result-head">
+            <div>
+              <p class="kicker">OpenLabel read</p>
+              <h2 id="product-name">BrainTap</h2>
+              <p id="product-category" class="muted">Guided relaxation + light/sound headset</p>
+            </div>
+            <div class="status-stack">
+              <span class="pill warning" id="verdict-pill">Caution - Pioneer with overclaiming</span>
+              <span class="pill" id="coverage-pill">Provisional</span>
+            </div>
+          </div>
+
+          <div class="answer-grid">
+            <article class="answer-card big-read-card">
+              <p class="kicker">Big Read</p>
+              <p id="big-read" class="big-read"></p>
+            </article>
+            <article class="answer-card honest-card">
+              <p class="kicker">Honest Proposition</p>
+              <p id="honest-proposition"></p>
+            </article>
+            <article class="answer-card live-card">
+              <p class="kicker">Live Question</p>
+              <p id="live-question"></p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="soul">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Offering Soul</p>
+              <h2>Current soul, most honest soul.</h2>
+            </div>
+            <p>The current soul shows the operating logic. The honest soul shows the version that could better serve the same real need.</p>
+          </div>
+          <div class="soul-grid">
+            <article class="soul-card">
+              <h3>Current Offering Soul</h3>
+              <h4>Founder vision / honest seed</h4>
+              <p id="current-seed"></p>
+              <h4>Purpose</h4>
+              <p id="current-purpose"></p>
+              <h4>Instructions</h4>
+              <ul id="current-instructions"></ul>
+              <h4>Where vision becomes half-baked</h4>
+              <p id="current-halfbaked"></p>
+              <h4>Exchange</h4>
+              <p id="current-exchange"></p>
+            </article>
+
+            <article class="soul-card honest-soul">
+              <h3>Most Honest Offering Soul</h3>
+              <h4>Purpose</h4>
+              <p id="honest-purpose"></p>
+              <h4>Instructions</h4>
+              <ul id="honest-instructions"></ul>
+              <h4>Exchange</h4>
+              <p id="honest-exchange"></p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="choices">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Better-bounded choices</p>
+              <h2>The need is real. The purchase is optional.</h2>
+            </div>
+            <p>Alternatives reveal the gap between what the user needs and what the offer asks them to buy.</p>
+          </div>
+          <div class="alt-grid" id="alternatives"></div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Conviviality Takeaways</p>
+              <h2>Does it build capacity, or substitute for it?</h2>
+            </div>
+          </div>
+          <div class="takeaway-grid">
+            <article class="takeaway-card good">
+              <h3>May scaffold</h3>
+              <p id="scaffolds"></p>
+            </article>
+            <article class="takeaway-card caution">
+              <h3>May substitute</h3>
+              <p id="substitutes"></p>
+            </article>
+            <article class="takeaway-card">
+              <h3>Best use</h3>
+              <p id="best-use"></p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section panel-section">
+          <div class="section-head">
+            <div>
+              <p class="kicker">For You</p>
+              <h2>Same offering, different reader risk.</h2>
+            </div>
+          </div>
+          <div class="reader-grid" id="reader-panels"></div>
+        </section>
+
+        <section class="section agent-section">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Agentic Health Management</p>
+              <h2>Would this survive an agent?</h2>
+            </div>
+          </div>
+          <div class="agent-grid">
+            <article class="agent-card">
+              <h3>What gets flagged</h3>
+              <p id="agent-flags"></p>
+            </article>
+            <article class="agent-card">
+              <h3>What survives</h3>
+              <p id="agent-survives"></p>
+            </article>
+            <article class="agent-card">
+              <h3>Remediation path</h3>
+              <p id="agent-remediation"></p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section evidence-section" id="evidence">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Why we think that</p>
+              <h2>Enough trace to trust the read.</h2>
+            </div>
+            <p>This prototype shows compressed evidence, not the full workbook.</p>
+          </div>
+          <div class="evidence-grid">
+            <article class="evidence-card">
+              <h3>Saw</h3>
+              <p id="saw"></p>
+            </article>
+            <article class="evidence-card">
+              <h3>Means</h3>
+              <p id="means"></p>
+            </article>
+            <article class="evidence-card">
+              <h3>Gaps</h3>
+              <p id="gaps"></p>
+            </article>
+            <article class="evidence-card">
+              <h3>Concern shape</h3>
+              <ul id="concerns"></ul>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>Static prototype. OpenLabel is not medical, legal, financial, or investment advice. Verdicts are provisional unless marked otherwise.</p>
+      </footer>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
