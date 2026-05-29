@@ -1,0 +1,15 @@
+dimension_id,dimension_name,concern_score,label,confidence,rationale
+D1,Evidence Posture,2.2,Moderate-low concern,medium-high,"Sana has FDA De Novo clearance and a product-specific sham-controlled neuropathic pain RCT, but broader indications remain developing."
+D2,Technology / Mechanism Validity,2.5,Moderate concern,medium,"Audio-visual stimulation for pain now has meaningful product-specific support; broader neural recovery/well-being mechanism remains more tentative."
+D3,Marketing Integrity,3.0,Mixed concern,medium,"Sana uses disclaimers and is not broadly selling, but public copy blends relief/recovery/well-being, authority signals, and stale FDA language."
+D4,Conviviality / Agency,2.6,Moderate concern,medium,"Potentially useful adjunctive relief tool; risk is device-mediated pain agency if users over-attribute relief to proprietary AVS."
+D5,Regulatory / Ethical Posture,2.4,Moderate-low concern,medium-high,"Cleared Rx indication and trial focus are strong; public materials need cleanup after clearance."
+D6,Epistemic Culture,2.5,Moderate concern,medium,"Clinical-trial path is serious; founder-origin and authority halo should be kept subordinate to data."
+D7,Phenomenological Honesty,2.8,Mixed concern,medium,"Pain relief experience is being tested seriously; founder and recovery language can overextend lived benefit into broad promise."
+D8,Ego-Development / Register,2.6,Moderate concern,medium,"Expert/achiever medical-device register with rescue-founder narrative; less cosmological capture than wellness devices."
+D9,Actual Function / Scope Honesty,3.0,Mixed concern,medium-high,"Cleared scope is narrow and clear in FDA/clinical area; homepage and FAQ create scope confusion."
+D10,Mechanism Honesty,2.8,Mixed concern,medium,"Mechanism is plausible and now partly substantiated for neuropathic pain, but entrainment/recovery language needs careful mapping."
+L1,Safety / Downside Risk,2.8,Mixed concern,medium,"FDA lists risks including headache/migraine, photosensitivity, insomnia, anxiety; trial reported no serious/unanticipated AEs."
+L2,Cost / Exit / Access,2.7,Mixed concern,medium,"Not currently for sale; return/subscription language matters for current/future commercial access."
+L3,Data Rights / Privacy,3.0,Mixed concern,medium,"Health/device data collection is meaningful; app review and deletion/export pathway not completed."
+

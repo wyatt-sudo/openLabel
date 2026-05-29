@@ -1,0 +1,13 @@
+detection_id,signal_id,severity,confidence,source_ids,claim_ids,rationale
+D1,real-regulatory-substrate,positive,high,S8;S9,C3;C4,"FDA De Novo clearance exists for a narrow prescription adjunctive neuropathic pain use."
+D2,product-specific-rct,positive,medium-high,S10;S11,C13,"Published sham-controlled RCT supports neuropathic pain use, with funding/conflict caveats."
+D3,scope-drift,medium-high,medium,S1;S15,C1;C7,"Homepage/news language broadens into recovery, well-being, sleep, and mental-health-adjacent claims."
+D4,stale-regulatory-copy,high,high,S5;S16,C8,"FAQ still says not approved for specific medical condition despite current De Novo clearance; needs cleanup."
+D5,authority-halo,medium,high,S1;S3;S4,C2,"DOD, FDA, patents, grants, awards, and breakthrough status can create broad trust beyond cleared scope."
+D6,founder-miracle-origin,medium,medium-high,S2,C5,"Founder story is compelling but risks becoming proof-by-origin if overused."
+D7,mechanism-to-outcome-leap,medium,medium,S15,C6;C7,"AVS/entrainment explanation is plausible but not sufficient for every recovery/well-being extension."
+D8,data-rights-health-sensitivity,medium,high,S7,C11,"Device/app collects health and diagnostic self-report data plus heart-rate and usage data."
+D9,exit-friction,medium,high,S6,C12,"Return/subscription terms can create friction if applied to current/future users."
+D10,safety-specificity-needed,medium,medium-high,S5;S9;S10,C10,"FDA lists specific risks; safety messaging should be visible and current."
+D11,availability-boundary,positive,high,S5,C9,"Device not currently publicly sold; trial/Rx boundary lowers immediate consumer capture risk."
+

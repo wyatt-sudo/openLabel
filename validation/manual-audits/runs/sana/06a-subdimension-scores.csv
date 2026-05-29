@@ -1,0 +1,18 @@
+dimension_id,subdimension,concern_score,label,confidence,rationale
+D1,Product-specific controlled evidence,1.8,Low concern,medium-high,"Published sham-controlled RCT for neuropathic pain plus FDA De Novo."
+D1,Indication-specific match,2.0,Low-moderate concern,high,"Strong for temporary neuropathic pain; weaker for PTSD/recovery/well-being."
+D1,Independence/conflicts,3.0,Mixed concern,medium,"Sana funded RCT and company staff coauthored; external academic team involved."
+D2,Mechanism plausibility,2.4,Moderate-low concern,medium,"Light/sound AVS and pain modulation are plausible enough for a cleared device category."
+D2,Mechanism breadth,3.2,Mixed concern,medium,"Mechanism does not automatically support PTSD, sleep, broad recovery, or all neurological claims."
+D3,Authority signal discipline,3.0,Mixed concern,medium,"FDA/DOD/patents can help or overpersuade depending on context."
+D3,Disclaimers and boundary clarity,2.7,Mixed concern,medium,"PTSD disclaimer is present; stale FAQ undermines clarity."
+D4,Scaffolding,2.0,Positive scaffold,medium,"May help users access pain relief, relaxation, rest, and non-drug adjunctive support."
+D4,Substitution risk,3.0,Mixed concern,medium,"Could teach that relief depends on a proprietary prescription device rather than transferable practices or broader care."
+D5,Regulatory fit,1.8,Low concern,high,"FDA De Novo scope is real and current."
+D5,Regulatory-copy hygiene,3.5,High concern,high,"Company website needs current-status consistency."
+D7,User-experience respect,2.2,Moderate-low concern,medium,"Relief is taken seriously enough to test clinically."
+D7,Overtranslation of anecdote,3.2,Mixed concern,medium,"Founder miracle story should not become typical-efficacy implication."
+D9,Availability/sales boundary,2.2,Moderate-low concern,medium-high,"Not currently generally sold; trial/Rx boundary reduces immediate consumer overreach."
+D9,Public net impression,3.3,Mixed-high concern,medium,"Homepage still reads broader than FDA indication."
+D10,Consciousness/practice vs mechanism split,2.7,Mixed concern,medium,"Sana is mostly mechanism-claimed; there may also be rest/ritual effects but clinical pain mechanism is foregrounded."
+

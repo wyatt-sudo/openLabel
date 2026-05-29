@@ -1,0 +1,10 @@
+extraction_id,source_ids,extraction_type,summary
+E1,S8;S9,regulatory,"FDA granted De Novo DEN250005 on Jan 16 2026 for Sana Device as a prescription audio-visual stimulator for adjunctive temporary relief of neuropathic pain in adults."
+E2,S10;S11,clinical,"BMC Neurology 2026 sham-controlled RCT in 75 chronic neuropathic pain participants found active device superiority over sham at Week 14 on NPSI total; no serious/unanticipated AEs; Sana funded study and company staff coauthored."
+E3,S12;S4,clinical,"PTSD pilot RCT in veterans reported improvements in PTSD, anxiety, depression, and quality of life with Sana plus treatment as usual; Sana states device is not cleared for PTSD."
+E4,S2,testimonial,"Founder origin story describes severe nerve-damage pain after accident, prototype relief, and decades of pain-free life."
+E5,S15,mechanism,"Company explains AVS as coordinated light/sound pulses intended to entrain neural activity and resemble meditative-state effects."
+E6,S5;S16,regulatory,"Older FAQ/news language describes Sana as general wellness and not FDA-approved for a specific medical condition, creating stale-public-copy tension after 2026 De Novo."
+E7,S7,privacy,"Privacy policy lists contact/profile data, diagnostic self-reports, journal entries, demographics, geolocation, transactions, usage, device use, heart-rate data, and Firebase analytics."
+E8,S6,commerce,"Return policy requires RMA and device inspection; subscription continues until device returned and inspected; shipping/handling/taxes not refundable."
+

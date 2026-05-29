@@ -1,0 +1,16 @@
+claim_id,claim_fragment,source_ids,claim_type,risk_level,notes
+C1,"Innovative audiovisual technology allows the user to accelerate their physical recovery and improve their mental well-being",S1,wellness/medical-adjacent,medium,"Broad homepage benefit language."
+C2,"Funded by the Department of Defense for PTSD",S1;S4,authority/clinical halo,medium,"Paired with disclaimer that PTSD clearance is not granted."
+C3,"The Sana Device is FDA De Novo cleared as an adjunctive treatment for temporary relief of neuropathic pain in patients aged 18 and older",S4;S8;S9,regulatory/medical,low,"Supported by FDA De Novo scope."
+C4,"Prescription audiovisual stimulator for temporary pain relief adjunctive use",S8;S9,regulatory/medical,low,"FDA classification; Rx device."
+C5,"Earliest prototype removed all nerve damage pain and founder has been pain-free since 1993",S2,testimonial/founder-origin,medium-high,"Powerful anecdotal origin; not typical-use evidence."
+C6,"AVS affects the central nervous system by synchronizing groups of neurons to frequencies of light and sound",S15,mechanism,medium,"Plausible category mechanism but consumer-facing certainty should match evidence."
+C7,"Potential benefits include improving sleep management, accelerating mental and physical recovery, increasing overall wellbeing",S15,wellness/medical-adjacent,medium-high,"Broader than De Novo pain indication."
+C8,"FDA has provided legally binding opinion safe and appropriate for general wellness",S5;S16,regulatory/wellness,medium,"FAQ appears stale because current De Novo clearance exists; language may confuse."
+C9,"Sana device is not currently available for sale; focusing on clinical trials",S5,availability/scope,low,"Important current consumer-access boundary."
+C10,"No known serious risks have been identified",S5,safety,medium,"FDA letter lists risks; trial reported no serious/unanticipated AEs, but phrasing should be bounded."
+C11,"Privacy policy collects diagnostic self-reports, journal entries, heart-rate data, location, usage, Firebase analytics",S7,data/privacy,medium,"Health-data trust surface."
+C12,"Subscription will not be cancelled until returned and inspected; charges continue until device received",S6,sales/exit,medium,"Important if commercial sale resumes or current users return."
+C13,"Neuropathic pain RCT showed active superiority over sham at Week 14",S10;S11,clinical_evidence,low,"Supports cleared pain indication; company-funded and still one pivotal domain."
+C14,"PTSD pilot showed significant improvements vs treatment as usual",S12,clinical_evidence,medium,"Promising but PTSD not cleared; not sham device control in same way as pain claim."
+

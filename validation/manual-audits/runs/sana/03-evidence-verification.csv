@@ -1,0 +1,15 @@
+claim_id,evidence_ids,match_quality,support_label,confidence,rationale
+C3,E1,strong,supported,high,"FDA De Novo DEN250005 confirms prescription adjunctive temporary neuropathic pain relief for adults."
+C4,E1,strong,supported,high,"FDA letter names device type and adjunctive pain-relief intended use."
+C13,E2,strong,supported for neuropathic pain,medium-high,"2026 sham-controlled RCT reports superiority over sham at Week 14; Sana-funded and conflicts disclosed."
+C1,E1;E2;E3,partial,partly supported / overbroad,medium,"Physical recovery and mental well-being are broader than cleared indication and visible evidence."
+C2,E3,partial,authority halo,high,"DOD-funded PTSD work exists; disclaimer correctly says not cleared for PTSD."
+C5,E4,weak,anecdotal only,high,"Founder pain story may be true and meaningful but cannot support typical product effects."
+C6,E2;E5,partial,plausible but mechanism certainty should be limited,medium,"AVS/entrainment mechanism is plausible but specific neural mechanism and durable outcomes need careful boundaries."
+C7,E2;E3,partial,promising but overbroad,medium,"Sleep/recovery/well-being claims extend beyond De Novo pain indication and require clearer evidence mapping."
+C8,E1;E6,stale/conflicting,needs update,high,"Older general-wellness language conflicts with current Rx De Novo status and could confuse users."
+C10,E1;E2,partial,mostly supported but should be bounded,medium-high,"FDA identified risks; RCT reported 2 related AEs and no serious/unanticipated AEs."
+C11,E7,strong,supported,high,"Privacy policy directly lists diagnostic, journal, device heart-rate, geolocation, usage, and analytics data."
+C12,E8,strong,supported,high,"Current-user FAQ directly states subscription continues until returned/inspected."
+C14,E3,partial,promising / not cleared,medium,"Pilot RCT suggests PTSD benefit, but Sana explicitly says not cleared for PTSD."
+

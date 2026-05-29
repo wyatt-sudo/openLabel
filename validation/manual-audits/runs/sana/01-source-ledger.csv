@@ -1,0 +1,18 @@
+source_id,source_name,source_type,url,retrieved,trust_weight,notes
+S1,Sana homepage,company_primary,https://www.sana.io/,2026-05-29,medium,"Public positioning: relief, physical recovery, mental well-being, PTSD grant disclaimer."
+S2,Sana About page,company_primary,https://www.sana.io/about,2026-05-29,medium,"Founder origin story, personal pain anecdote, team/advisory board."
+S3,Sana Accomplishments page,company_primary,https://www.sana.io/accomplishments-sana,2026-05-29,medium,"FDA De Novo statement, patents, grants, awards, breakthrough designation history."
+S4,Sana Clinical page,company_primary,https://www.sana.io/clinical,2026-05-29,medium-high,"Clinical section, De Novo scope, PTSD and neuropathic pain data positioning."
+S5,Sana Device FAQ,company_primary,https://www.sana.io/the-sana-device,2026-05-29,medium,"Device availability, use, safety, stale FDA language, trial participant status."
+S6,Sana Current Users FAQ,company_primary,https://www.sana.io/current-users,2026-05-29,medium,"Return policy, billing, warranty, subscription continuation until returned/inspected."
+S7,Sana Privacy Policy,company_primary,https://www.sana.io/privacy-policy,2026-05-29,medium,"Personal, diagnostic, health/device, location, Firebase analytics data collection."
+S8,FDA De Novo DEN250005,regulatory_primary,https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/denovo.cfm?id=DEN250005,2026-05-29,high,"FDA De Novo granted Jan 16 2026; prescription audiovisual stimulator for temporary neuropathic pain relief."
+S9,FDA De Novo letter PDF,regulatory_primary,https://www.accessdata.fda.gov/cdrh_docs/pdf25/DEN250005.pdf,2026-05-29,high,"Indication, class, product code, risks, Rx status, postmarket obligations."
+S10,BMC Neurology neuropathic pain RCT,peer_reviewed,https://link.springer.com/article/10.1186/s12883-026-04785-w,2026-05-29,high,"75-participant sham-controlled randomized clinical trial; funded by Sana; conflicts disclosed."
+S11,PubMed neuropathic pain record,peer_reviewed_index,https://pubmed.ncbi.nlm.nih.gov/41840535/,2026-05-29,high,"Indexed record for BMC Neurology RCT."
+S12,PTSD pilot RCT,peer_reviewed,https://www.scitechnol.com/peer-review/a-pilot-investigation-of-the-effectiveness-of-the-sana-device-in-management-of-ptsd-a-blinded-randomized-controlled-trial-LMUF.php?article_id=26757,2026-05-29,medium,"48-veteran pilot RCT; Sana staff coauthors; not cleared for PTSD."
+S13,ClinicalTrials neuropathic pain,trial_registry,https://clinicaltrials.gov/study/NCT04280562,2026-05-29,high,"Remote participation AVS/Sana device trial registry."
+S14,ClinicalTrials fibromyalgia,trial_registry,https://clinicaltrials.gov/study/NCT04568798,2026-05-29,high,"Fibromyalgia randomized trial record."
+S15,Sana AVS overview/news,company_primary,https://www.sana.io/news/audiovisualstimulation-cxjhh,2026-05-29,medium,"Mechanism framing: AVS, entrainment, rest/recovery/well-being."
+S16,Sana 513(g) news,company_primary,https://www.sana.io/news/2020/8/3-rjsr7,2026-05-29,medium,"Older general wellness/FDA 513(g) positioning."
+

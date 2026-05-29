@@ -1,0 +1,8 @@
+query_id,query,source_class,result_summary
+Q1,https://www.sana.io/,company,"Homepage reviewed for public positioning and disclaimers."
+Q2,Sana Device FDA De Novo DEN250005,regulatory,"FDA De Novo record and letter found; Jan 16 2026 granted."
+Q3,Sana Device neuropathic pain randomized trial,clinical,"BMC Neurology 2026 sham-controlled RCT found."
+Q4,Sana Device PTSD randomized controlled trial,clinical,"SciTechnol PTSD pilot RCT found; not cleared for PTSD."
+Q5,site:sana.io Sana device FAQ privacy returns,company,"FAQ, current-user return policy, and privacy surfaces reviewed."
+Q6,Sana Device fibromyalgia ClinicalTrials,trial_registry,"Fibromyalgia and neuropathic pain registry leads identified; not fully audited."
+

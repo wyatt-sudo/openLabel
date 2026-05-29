@@ -83,6 +83,93 @@ const offerings = {
       ]
     }
   },
+  sana: {
+    aliases: ["sana", "sana health", "sana.io", "sana device", "sana relief"],
+    name: "Sana",
+    category: "Prescription audio-visual stimulation device for neuropathic pain",
+    verdict: "Promising / scoped caution",
+    coverage: "Provisional",
+    bigRead:
+      "Sana is one of the more credible frontier device examples: it has a real FDA De Novo clearance and product-specific controlled evidence for neuropathic pain. The OpenLabel concern is not that the device is flimsy. The concern is that the public story still needs disciplined scope control so neuropathic-pain legitimacy does not spill into broader recovery, PTSD, sleep, or mental well-being claims before those uses earn their own evidence and clearance.",
+    honestProposition:
+      "Coordinated pulses of light and sound may modulate pain perception enough to offer non-drug, adjunctive relief for some adults with neuropathic pain. That proposition has moved beyond wellness speculation: it now has a cleared prescription indication and a published sham-controlled trial.",
+    liveQuestion:
+      "Can Sana keep its legitimate neuropathic-pain evidence narrow and current while building future indications without letting the pipeline borrow certainty from the clearance?",
+    currentSoul: {
+      seed:
+        "Someone had a personal pain crisis, noticed that coordinated sensory stimulation might change pain state, and spent years trying to turn a lived relief phenomenon into a regulated medical device.",
+      purpose:
+        "Translate a personal pain-relief discovery into a prescription audio-visual neuromodulation device with regulatory legitimacy, clinical partnerships, and future indications.",
+      instructions: [
+        "Lead with relief, recovery, and the possibility of non-drug pain support.",
+        "Use FDA De Novo, DOD funding, patents, awards, and clinical publications to establish seriousness.",
+        "Keep neuropathic pain as the cleared anchor while pointing toward PTSD, fibromyalgia, sleep, and recovery as investigational frontiers.",
+        "Let the founder origin story make the technology feel emotionally urgent and human.",
+        "Use device/app data to support use, research, analytics, and future refinement."
+      ],
+      translation:
+        "The core translation is unusually legitimate: a personal relief insight became a device, a trial program, and an FDA-cleared indication. The risk is pipeline halo. The more the public story says recovery, mental well-being, PTSD, or neurological disorders near the FDA milestone, the easier it becomes for users to overread what has actually been proven.",
+      sales:
+        "Sana says the device is not currently broadly available and is focused on clinical trials. Current-user materials still include returns, warranty, billing, and subscription language, suggesting commercial infrastructure exists or existed. The likely future model is prescription access, clinical partnerships, reimbursement, device/app use, and data-enabled support.",
+      exchange:
+        "Clinical trust, sensitive health data, time, attention, and possibly money or insurance participation in exchange for a chance at non-drug adjunctive pain relief."
+    },
+    honestSoul: {
+      purpose:
+        "Offer a prescription adjunctive audio-visual stimulation device for adults with neuropathic pain, while building evidence carefully for other indications without borrowing certainty from the cleared one.",
+      instructions: [
+        "State the cleared indication first, every time.",
+        "Separate neuropathic pain evidence from PTSD, fibromyalgia, recovery, sleep, and well-being evidence.",
+        "Update stale FDA/general-wellness copy across the site and app surfaces.",
+        "Put contraindications, FDA-listed risks, data collection, access, cost, and exit terms where people make decisions.",
+        "Publish an indication-by-indication evidence table with methods, endpoints, limitations, conflicts, and current regulatory status.",
+        "Teach patients and clinicians to use the device as adjunctive support, not as the center of the healing journey."
+      ],
+      exchange:
+        "The user gains a bounded, clinically supervised tool and keeps agency, medical pluralism, informed consent, and clear expectations."
+    },
+    alternatives: [
+      ["Pain care", "Condition-specific pain care, medications when appropriate, PT/rehab, pain psychology, pacing, and clinician-guided neuromodulation."],
+      ["Mental health", "Trauma-focused PTSD care, CBT-I or sleep support, therapy, psychiatric care, and lower-cost relaxation practices where relevant."],
+      ["Sana as adjunct", "Use only inside the actual indication and access pathway: adult neuropathic pain, prescription context, adjunctive support, and clear risk screening."]
+    ],
+    conviviality: {
+      scaffolds:
+        "Non-drug pain relief, structured rest, clinical legitimacy for sensory neuromodulation, and a concrete option for people who have exhausted standard tools.",
+      substitutes:
+        "The user's broader pain literacy, clinician relationship, pacing, mental-health care, and trust in their own body if every symptom starts routing through the device or app score.",
+      bestUse:
+        "Hold Sana as a promising adjunctive tool for a specific pain indication, not as a general nervous-system authority."
+    },
+    panels: [
+      ["Chronic Illness & Complex Symptoms", "Sana is not another loose frequency-wellness product. It has a real FDA De Novo clearance for prescription adjunctive temporary relief of neuropathic pain in adults, and a published sham-controlled neuropathic pain trial. That matters. If you live with chronic pain, the sane interpretation is: this may become a legitimate adjunctive tool for a specific kind of pain, not a general answer to complex illness, PTSD, fibromyalgia, sleep, or recovery unless those claims are separately cleared and evidenced. The hope here is unusually concrete; the boundary still matters."],
+      ["Curious Consumer", "Right now Sana says the device is not generally available for sale and is focused on clinical trials, so this is less of an impulse purchase than BrainTap or Healy. If it becomes available to you, the first question is whether you are in the actual indicated population: adult neuropathic pain, using it as an adjunct to other therapy, likely under prescription access. The second question is whether the company makes the practical terms clear: who should avoid it, what it costs, what data it collects, how returns/subscriptions work, and what benefits are realistic."],
+      ["Frontier Health Optimizer", "Sana is the kind of frontier tool that deserves a more serious read. Audio-visual stimulation, pain perception, sleep, autonomic settling, and neuroplasticity are real research neighborhoods, and Sana has done more than make a vibe claim: it has a De Novo and a sham-controlled neuropathic pain trial. The discipline question is whether every future use keeps the same standard. PTSD, fibromyalgia, recovery, and well-being should not borrow certainty from neuropathic pain clearance. The frontier survives when each claim keeps its own evidence burden."],
+      ["Helpful Healer", "If you are a clinician, coach, practitioner, or family member, Sana should be held as an adjunctive prescription pain-relief device, not as a general nervous-system healer. The ethical recommendation is precise: use the cleared indication, screen for light/sound sensitivity and the FDA-listed risks, preserve other modes of therapy, and avoid translating PTSD/fibromyalgia/recovery signals into promises. The strongest version of Sana could help people suffer less without asking them to abandon medical pluralism or self-trust."]
+    ],
+    agent: {
+      flags:
+        "Scope hygiene: homepage recovery language, PTSD halo, older FAQ language, app-store wellness claims, health-data collection, return/subscription details, and incomplete public evidence mapping by indication.",
+      survives:
+        "FDA De Novo DEN250005, the prescription adjunctive neuropathic-pain indication, the published sham-controlled RCT, and the serious clinical-development posture.",
+      remediation:
+        "Publish an indication-by-indication evidence table, update stale pages, surface warnings and data practices before commitment, clarify access/pricing, and refuse to let pipeline indications borrow the pain clearance."
+    },
+    evidence: {
+      saw:
+        "Sana homepage, About, Accomplishments, Clinical, device FAQ, return policy, privacy policy, App Store listing, FDA De Novo DEN250005, FDA grant letter, BMC Neurology neuropathic pain RCT, PTSD pilot paper, and trial-registry leads.",
+      means:
+        "Credible narrow pain substrate with real regulatory and clinical support; broader recovery, PTSD, sleep, stress, fatigue, and well-being surfaces need separate evidence and clearance.",
+      gaps:
+        "Full FDA labeling/IFU archive, MAUDE adverse-event export, full trial table extraction, pricing/Rx flow, ad-library and social review, logged-in app/privacy behavior, Google Play, and company response.",
+      concerns: [
+        "Evidence concern: Moderate-low for neuropathic pain, higher for broader uses",
+        "Marketing integrity concern: Mixed / scope hygiene needed",
+        "Scope honesty concern: Mixed / stale and broad surfaces",
+        "Conviviality concern: Moderate / useful adjunct with dependency caveat"
+      ]
+    }
+  },
   healy: {
     aliases: ["healy", "healy world", "healy.shop", "healy world usa"],
     name: "Healy",
