@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OpenLabel Thesis Presentation</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #171615;
+        --muted: #5c625f;
+        --paper: #f5f0e7;
+        --surface: #fffdfa;
+        --line: #d8d0c1;
+        --accent: #355f6d;
+        --green: #4f7056;
+        --red: #a8453c;
+        --amber: #b8782e;
+        --violet: #62566e;
+        --shadow: 0 20px 60px rgba(24, 20, 16, 0.1);
+        --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        --serif: Georgia, "Times New Roman", serif;
+        --mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background:
+          linear-gradient(180deg, rgba(245, 240, 231, 0.98), rgba(237, 230, 218, 0.98)),
+          repeating-linear-gradient(90deg, rgba(23, 22, 21, 0.026) 0 1px, transparent 1px 96px);
+        color: var(--ink);
+        font-family: var(--sans);
+        line-height: 1.45;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .deck-nav {
+        align-items: center;
+        background: rgba(245, 240, 231, 0.94);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid rgba(23, 22, 21, 0.13);
+        display: flex;
+        gap: 18px;
+        justify-content: space-between;
+        padding: 14px clamp(18px, 4vw, 54px);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+      .brand {
+        display: grid;
+        text-decoration: none;
+      }
+
+      .brand strong {
+        font-family: var(--serif);
+        font-size: 27px;
+        font-weight: 500;
+        line-height: 1;
+      }
+
+      .brand span {
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: flex-end;
+      }
+
+      .nav-links a,
+      .slide-jump {
+        background: rgba(255, 253, 250, 0.8);
+        border: 1px solid rgba(23, 22, 21, 0.16);
+        border-radius: 999px;
+        cursor: pointer;
+        font: 850 12px/1 var(--sans);
+        padding: 10px 13px;
+        text-decoration: none;
+      }
+
+      .progress {
+        background: rgba(23, 22, 21, 0.12);
+        height: 3px;
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 30;
+      }
+
+      .progress-bar {
+        background: var(--accent);
+        height: 100%;
+        transform-origin: left center;
+        width: 0%;
+      }
+
+      main {
+        margin: 0 auto;
+        width: min(1220px, calc(100% - 36px));
+      }
+
+      .slide {
+        align-items: center;
+        display: grid;
+        min-height: calc(100vh - 70px);
+        padding: 58px 0;
+      }
+
+      .slide-inner {
+        width: 100%;
+      }
+
+      .eyebrow {
+        color: var(--muted);
+        font: 900 12px/1.2 var(--sans);
+        letter-spacing: 0.09em;
+        margin: 0 0 13px;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        font-family: var(--serif);
+        font-size: clamp(54px, 8vw, 108px);
+        font-weight: 500;
+        letter-spacing: 0;
+        line-height: 0.92;
+        margin-bottom: 24px;
+        max-width: 1040px;
+      }
+
+      h2 {
+        font-family: var(--serif);
+        font-size: clamp(42px, 6.3vw, 82px);
+        font-weight: 500;
+        letter-spacing: 0;
+        line-height: 0.95;
+        margin-bottom: 22px;
+        max-width: 1040px;
+      }
+
+      h3 {
+        font-size: 18px;
+        line-height: 1.2;
+      }
+
+      .lede {
+        color: #2c2a27;
+        font-size: clamp(21px, 2.3vw, 30px);
+        line-height: 1.32;
+        max-width: 860px;
+      }
+
+      .sublede {
+        color: var(--muted);
+        font-size: clamp(18px, 1.8vw, 23px);
+        max-width: 790px;
+      }
+
+      .hero-grid,
+      .split-grid,
+      .artifact-grid,
+      .audience-grid,
+      .engine-grid {
+        display: grid;
+        gap: 18px;
+      }
+
+      .hero-grid {
+        grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+      }
+
+      .split-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .artifact-grid {
+        grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+      }
+
+      .audience-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .engine-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .card,
+      .label-card,
+      .soul-card,
+      .quote-card {
+        background: var(--surface);
+        border: 1px solid rgba(23, 22, 21, 0.14);
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+        padding: clamp(20px, 3vw, 32px);
+      }
+
+      .label-card {
+        border-left: 8px solid var(--accent);
+      }
+
+      .label-title {
+        align-items: center;
+        border-bottom: 1px solid var(--line);
+        display: flex;
+        gap: 12px;
+        justify-content: space-between;
+        margin-bottom: 18px;
+        padding-bottom: 16px;
+      }
+
+      .label-title strong {
+        font-family: var(--serif);
+        font-size: 32px;
+        font-weight: 500;
+      }
+
+      .pill {
+        border: 1px solid rgba(23, 22, 21, 0.16);
+        border-radius: 999px;
+        color: var(--accent);
+        font: 900 11px/1 var(--mono);
+        padding: 8px 10px;
+        text-transform: uppercase;
+      }
+
+      .card p,
+      .label-card p,
+      .soul-card p,
+      .quote-card p {
+        color: #34312d;
+        font-size: 17px;
+      }
+
+      .card ul,
+      .soul-card ul {
+        margin: 0;
+        padding-left: 19px;
+      }
+
+      .card li,
+      .soul-card li {
+        color: #34312d;
+        margin: 10px 0;
+      }
+
+      .bad {
+        border-left: 6px solid var(--red);
+      }
+
+      .good {
+        border-left: 6px solid var(--green);
+      }
+
+      .amber {
+        border-left: 6px solid var(--amber);
+      }
+
+      .violet {
+        border-left: 6px solid var(--violet);
+      }
+
+      .big-line {
+        color: var(--ink);
+        font-family: var(--serif);
+        font-size: clamp(32px, 4.6vw, 64px);
+        line-height: 1.02;
+      }
+
+      .path {
+        display: grid;
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      .path-row {
+        align-items: center;
+        display: grid;
+        gap: 12px;
+        grid-template-columns: 84px minmax(0, 1fr);
+      }
+
+      .path-row span {
+        color: var(--muted);
+        font: 900 12px/1 var(--mono);
+        text-transform: uppercase;
+      }
+
+      .path-row strong {
+        background: rgba(255, 253, 250, 0.78);
+        border: 1px solid rgba(23, 22, 21, 0.14);
+        border-radius: 999px;
+        display: block;
+        padding: 13px 16px;
+      }
+
+      .soul-card {
+        background: #151513;
+        border-color: #2c2924;
+        box-shadow: 0 18px 52px rgba(0, 0, 0, 0.18);
+        color: #f8f1e6;
+        font-family: var(--mono);
+      }
+
+      .soul-card h3 {
+        color: #f8f1e6;
+        font-family: var(--mono);
+        font-size: 14px;
+        letter-spacing: 0.02em;
+        margin-bottom: 18px;
+        text-transform: uppercase;
+      }
+
+      .soul-card p,
+      .soul-card li {
+        color: #e4d9c7;
+        font: 14px/1.6 var(--mono);
+      }
+
+      .soul-card em {
+        color: #f7c87f;
+        font-style: normal;
+      }
+
+      .soul-card.honest {
+        background: #23352a;
+        border-color: #4f7056;
+      }
+
+      .slide-number {
+        color: var(--muted);
+        font: 900 12px/1 var(--mono);
+        margin-top: 26px;
+      }
+
+      .quote-card {
+        background: #191816;
+        color: #f8f1e6;
+      }
+
+      .quote-card p {
+        color: #f8f1e6;
+        font-family: var(--serif);
+        font-size: clamp(28px, 4vw, 54px);
+        line-height: 1.05;
+      }
+
+      .footer {
+        border-top: 1px solid rgba(23, 22, 21, 0.14);
+        color: var(--muted);
+        margin: 0 auto;
+        padding: 26px 0 40px;
+        width: min(1220px, calc(100% - 36px));
+      }
+
+      .controls {
+        bottom: 18px;
+        display: flex;
+        gap: 8px;
+        position: fixed;
+        right: 18px;
+        z-index: 12;
+      }
+
+      .slide-jump {
+        background: var(--ink);
+        color: var(--surface);
+      }
+
+      @media (max-width: 920px) {
+        .hero-grid,
+        .split-grid,
+        .artifact-grid,
+        .audience-grid,
+        .engine-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .slide {
+          min-height: auto;
+          padding: 48px 0;
+        }
+
+        .nav-links {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="progress" aria-hidden="true"><div class="progress-bar" id="progress-bar"></div></div>
+
+    <header class="deck-nav">
+      <a class="brand" href="./" aria-label="OpenLabel home">
+        <strong>OpenLabel</strong>
+        <span>Thesis presentation</span>
+      </a>
+      <nav class="nav-links" aria-label="Presentation sections">
+        <a href="#problem">Problem</a>
+        <a href="#thesis">Thesis</a>
+        <a href="#artifact">Artifact</a>
+        <a href="#engine">Engine</a>
+        <a href="#ask">Ask</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="slide" id="cover" data-slide>
+        <div class="slide-inner hero-grid">
+          <div>
+            <p class="eyebrow">OpenLabel</p>
+            <h1>A discernment layer for the modern healing marketplace.</h1>
+            <p class="lede">OpenLabel helps people see what a health offering is really asking them to trust, buy, become, and ignore.</p>
+            <p class="slide-number">01 / 12</p>
+          </div>
+          <article class="label-card">
+            <div class="label-title">
+              <strong>OpenLabel</strong>
+              <span class="pill">Provisional</span>
+            </div>
+            <p><strong>Active ingredients:</strong> evidence, intuition, agency, hope, caution, and better questions.</p>
+            <p><strong>Warning:</strong> may make persuasive health claims painfully legible.</p>
+            <p><strong>Best use:</strong> before buying the device, joining the program, trusting the protocol, or dismissing the possibility.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="slide" id="problem" data-slide>
+        <div class="slide-inner">
+          <p class="eyebrow">The problem</p>
+          <h2>Healing has become hard to navigate at exactly the moment people need navigation most.</h2>
+          <div class="split-grid">
+            <article class="card bad">
+              <h3>The market is loud</h3>
+              <p>Wellness products, nervous-system programs, devices, supplements, diagnostics, protocols, influencers, and communities all compete for trust.</p>
+            </article>
+            <article class="card amber">
+              <h3>The evidence is uneven</h3>
+              <p>Some offerings are serious. Some are speculative. Some contain real help wrapped in overclaiming. Some are extraction with a healing vocabulary.</p>
+            </article>
+          </div>
+          <p class="slide-number">02 / 12</p>
+        </div>
+      </section>
+
+      <section class="slide" data-slide>
+        <div class="slide-inner">
+          <p class="eyebrow">The trap</p>
+          <h2>Most tools force a false choice: debunk or believe.</h2>
+          <div class="split-grid">
+            <article class="card bad">
+              <h3>Cynicism</h3>
+              <p>Protects people from fraud, but can flatten ritual, expectancy, meaning, lived experience, and emerging possibility into "not proven."</p>
+            </article>
+            <article class="card bad">
+              <h3>Credulity</h3>
+              <p>Preserves hope, but often lets thin evidence, sales pressure, identity capture, and false certainty reorganize agency around the product.</p>
+            </article>
+          </div>
+          <p class="big-line" style="margin-top: 28px;">OpenLabel protects the middle.</p>
+          <p class="slide-number">03 / 12</p>
+        </div>
+      </section>
+
+      <section class="slide" id="thesis" data-slide>
+        <div class="slide-inner">
+          <p class="eyebrow">The thesis</p>
+          <h2>People need help healing amid incomplete knowledge.</h2>
+          <p class="lede">The job is not to kill imagination. The job is to preserve healing possibility while making overclaiming, dependency, and capture visible.</p>
+          <div class="path">
+            <div class="path-row"><span>01</span><strong>Pursue rigor without flattening lived experience.</strong></div>
+            <div class="path-row"><span>02</span><strong>Honor intuition while maintaining reality-testing.</strong></div>
+            <div class="path-row"><span>03</span><strong>Use technology to strengthen human discernment, not replace it.</strong></div>
+          </div>
+          <p class="slide-number">04 / 12</p>
+        </div>
+      </section>
+
+      <section class="slide" data-slide>
+        <div class="slide-inner split-grid">
+          <div>
+            <p class="eyebrow">The product move</p>
+            <h2>Open the label.</h2>
+            <p class="lede">The user does not just need a score. They need a clearer relationship to the thing being sold.</p>
+          </div>
+          <article class="card">
+            <h3>OpenLabel asks</h3>
+            <ul>
+              <li>What may be real here?</li>
+              <li>What is overclaimed?</li>
+              <li>What need is being served?</li>
+              <li>What is being sold besides the product?</li>
+              <li>What would be a cleaner way to hold this?</li>
+              <li>What alternatives preserve more agency?</li>
+            </ul>
+          </article>
+          <p class="slide-number">05 / 12</p>
+        </div>
+      </section>
+
+      <section class="slide" id="artifact" data-slide>
+        <div class="slide-inner artifact-grid">
+          <div>
+            <p class="eyebrow">Signature artifact</p>
+            <h2>The two souls reveal the gap.</h2>
+            <p class="sublede">The current soul shows the operating logic. The most honest soul shows the same offering rebuilt in service of the person.</p>
+          </div>
+          <div class="split-grid">
+            <article class="soul-card">
+              <h3>Current Offering Soul</h3>
+              <p><em>Purpose:</em> Convert a real health need into trust in this specific product, protocol, device, community, or worldview.</p>
+              <ul>
+                <li>Use science language where it increases confidence.</li>
+                <li>Let testimonials carry mechanism certainty.</li>
+                <li>Make the product feel like the gateway to relief.</li>
+                <li>Keep the user inside the commercial ecology.</li>
+              </ul>
+            </article>
+            <article class="soul-card honest">
+              <h3>Most Honest Offering Soul</h3>
+              <p><em>Purpose:</em> Serve the real need without demanding more trust than the evidence earns.</p>
+              <ul>
+                <li>Name what is known, plausible, speculative, and unknown.</li>
+                <li>Teach transferable capacity.</li>
+                <li>Make limits, risks, costs, and alternatives visible.</li>
+                <li>Help the user leave with more agency.</li>
+              </ul>
+            </article>
+          </div>
+          <p class="slide-number">06 / 12</p>
+        </div>
+      </section>
+
+      <section class="slide" data-slide>
+        <div class="slide-inner">
+          <p class="eyebrow">Who it serves</p>
+          <h2>Same offering. Different reader risk.</h2>
+          <div class="audience-grid">
+            <article class="card good">
+              <h3>Chronic Illness & Complex Symptoms</h3>
+              <p>Needs hope without treatment delay, validation without capture, and experimentation without self-blame.</p>
+            </article>
+            <article class="card amber">
+              <h3>Curious Consumer</h3>
+              <p>Needs a plain read on whether this is worth attention, money, time, and trust.</p>
+            </article>
+            <article class="card violet">
+              <h3>Frontier Health Optimizer</h3>
+              <p>Needs possibility, mechanism, dose, endpoints, falsifiability, and cost-to-value discipline.</p>
+            </article>
+            <article class="card good">
+              <h3>Helpful Healer</h3>
+              <p>Needs recommendation ethics: fit, contraindications, scope, consent, alternatives, and agency preservation.</p>
+            </article>
+          </div>
+          <p class="slide-number">07 / 12</p>
+        </div>
+      </section>
+
+      <section class="slide" id="engine" data-slide>
+        <div class="slide-inner">
+          <p class="eyebrow">The engine</p>
+          <h2>A validation-aware harness, not a generic AI answer.</h2>
+          <div class="engine-grid">
+            <article class="card">
+              <h3>Evidence</h3>
+              <p>Studies, regulatory records, patents, adverse events, terms, privacy, reviews, community signal, and claim history.</p>
+            </article>
+            <article class="card">
+              <h3>Dimensions</h3>
+              <p>Evidence posture, mechanism honesty, marketing integrity, conviviality, scope, safety, data rights, alternatives, and company care.</p>
+            </article>
+            <article class="card">
+              <h3>Interpretation</h3>
+              <p>Big Read, Honest Proposition, Offering Souls, reader panels, agentic-health survival, and coverage gaps.</p>
+            </article>
+          </div>
+          <p class="slide-number">08 / 12</p>
+        </div>
+      </section>
+
+      <section class="slide" data-slide>
+        <div class="slide-inner">
+          <p class="eyebrow">What makes it different</p>
+          <h2>OpenLabel is calibrated against both grift and premature certainty.</h2>
+          <div class="split-grid">
+            <article class="card good">
+              <h3>It does not dismiss the grey area</h3>
+              <p>Ritual, expectancy, meaning, community, embodiment, and emerging mechanisms can matter. OpenLabel preserves what might help.</p>
+            </article>
+            <article class="card amber">
+              <h3>It does not let mystery launder mechanism claims</h3>
+              <p>When a technology claims specific therapeutic or diagnostic authority, it has to meet a higher burden.</p>
+            </article>
+          </div>
+          <p class="slide-number">09 / 12</p>
+        </div>
+      </section>
+
+      <section class="slide" data-slide>
+        <div class="slide-inner">
+          <p class="eyebrow">User transformation</p>
+          <h2>From anxious consumer to capable navigator.</h2>
+          <div class="split-grid">
+            <article class="card bad">
+              <h3>Before</h3>
+              <p>"Maybe this is finally the thing that helps me."</p>
+              <p>"Or maybe this is all bullshit."</p>
+            </article>
+            <article class="card good">
+              <h3>After</h3>
+              <p>"I can see what this might offer, what it overclaims, what it costs me, and how to explore without surrendering my agency."</p>
+            </article>
+          </div>
+          <p class="slide-number">10 / 12</p>
+        </div>
+      </section>
+
+      <section class="slide" data-slide>
+        <div class="slide-inner quote-card">
+          <p>OpenLabel is technology in service of the conditions that make healing possible: agency, hope, humility, patience, embodied self-trust, community, and freedom from false certainty.</p>
+          <p class="slide-number">11 / 12</p>
+        </div>
+      </section>
+
+      <section class="slide" id="ask" data-slide>
+        <div class="slide-inner">
+          <p class="eyebrow">Where it goes</p>
+          <h2>A public trust layer for consumer health.</h2>
+          <p class="lede">The first product is a searchable audit artifact. The larger project is a methodology, database, and cultural instrument for better health discernment.</p>
+          <div class="engine-grid">
+            <article class="card">
+              <h3>For people</h3>
+              <p>Clearer trust, better questions, safer exploration, and less capture.</p>
+            </article>
+            <article class="card">
+              <h3>For builders</h3>
+              <p>A mirror for whether the offering would survive evidence-aware, agentic health navigation.</p>
+            </article>
+            <article class="card">
+              <h3>For the ecosystem</h3>
+              <p>A shared language for evidence, meaning, claims, care, incentives, and agency.</p>
+            </article>
+          </div>
+          <p class="slide-number">12 / 12</p>
+        </div>
+      </section>
+    </main>
+
+    <div class="controls" aria-label="Slide controls">
+      <button class="slide-jump" type="button" id="prev-slide">Prev</button>
+      <button class="slide-jump" type="button" id="next-slide">Next</button>
+    </div>
+
+    <footer class="footer">
+      <p>OpenLabel thesis presentation. Static HTML artifact. Not medical, legal, financial, or investment advice.</p>
+    </footer>
+
+    <script>
+      const slides = Array.from(document.querySelectorAll("[data-slide]"));
+      const progressBar = document.getElementById("progress-bar");
+      let currentIndex = 0;
+
+      function nearestSlideIndex() {
+        const middle = window.scrollY + window.innerHeight / 2;
+        return slides.reduce((best, slide, index) => {
+          const distance = Math.abs(slide.offsetTop + slide.offsetHeight / 2 - middle);
+          return distance < best.distance ? { index, distance } : best;
+        }, { index: 0, distance: Infinity }).index;
+      }
+
+      function updateProgress() {
+        currentIndex = nearestSlideIndex();
+        const denom = Math.max(slides.length - 1, 1);
+        progressBar.style.width = `${(currentIndex / denom) * 100}%`;
+      }
+
+      function goToSlide(index) {
+        const next = Math.max(0, Math.min(index, slides.length - 1));
+        slides[next].scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      document.getElementById("prev-slide").addEventListener("click", () => goToSlide(currentIndex - 1));
+      document.getElementById("next-slide").addEventListener("click", () => goToSlide(currentIndex + 1));
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowRight" || event.key === "PageDown") goToSlide(currentIndex + 1);
+        if (event.key === "ArrowLeft" || event.key === "PageUp") goToSlide(currentIndex - 1);
+      });
+
+      window.addEventListener("scroll", updateProgress, { passive: true });
+      window.addEventListener("resize", updateProgress);
+      updateProgress();
+    </script>
+  </body>
+</html>
