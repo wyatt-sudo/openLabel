@@ -13,8 +13,13 @@ Act on Joseph's 2026-06-10 design review of the `ship/` prototype: sharpen the h
 
 **Constraints for Bucket A:** Static HTML/CSS only, no new deps, no build step. Don't touch `app.js` data or the seeded reads. Preserve the soul section as-is — Joseph explicitly liked it. After editing, open `ship/index.html` and confirm it still renders + the seeded BrainTap read still populates.
 
-## Bucket B: blocked on Joseph (do NOT start — waiting on inputs)
-Joseph is sending two prompts: (1) a Jobs-to-be-Done market-research prompt (Reddit/forums, real users' words), (2) a BrandScript (StoryBrand) prompt. Intended flow once received: run JTBD → BrandScript → website wireframe around the BrandScript → revise `ship/` marketing copy. Park until the prompts land.
+## Bucket B: brand foundation — UNBLOCKED 2026-06-11, analyses DONE
+Joseph's prompts arrived (JTBD + Business Foundation + ICP + BrandScript). Executed the full chain with real web research (55+ verbatim forum quotes). Deliverables in `brand/`:
+- [x] **B1.** `brand/01-jtbd-analysis.md` — JTBD + Marketing Gold quote bank
+- [x] **B2.** `brand/02-business-foundation.md` — offering/value/pricing/diagnosis/priorities
+- [x] **B3.** `brand/03-ideal-client-profile.md` — segments, prioritization, lead ICP, where to find them
+- [x] **B4.** `brand/04-brandscript.md` — StoryBrand script to drive all marketing copy
+- [ ] **B5. Website revision (next).** Rebuild the `ship/` homepage as a StoryBrand narrative driven by `brand/04-brandscript.md`: hero = "Read the claim before it reads you," story strip = External→Internal→Philosophical problem, Guide (is-it-biased?) section, paste tool framed by the 3-step "Open Read" plan, Failure/Success band, identity-shift close + CTA + email magnet. **Awaiting Wyatt sign-off on lead ICP + tagline before rebuild** (see Decisions).
 
 ## Bucket C: directional / roadmap (capture, don't build)
 - **Browser extension = the distribution channel.** Product functionality (the claim-read loop) eventually moves into an extension: click an icon on any site → OpenLabel's epistemic read of that site's claims. Homepage then becomes pure marketing.
