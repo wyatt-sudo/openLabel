@@ -8,8 +8,9 @@
 **OpenLabel** — an honest read on what health products are really selling you.
 
 ### Tagline
-**Read the claim before it reads you.**
-*(Alts: "Hope, without getting played." · "Discernment for things being sold to your health.")*
+**Discernment for the things being sold to your health.** *(chosen 2026-06-14 — leads the homepage)*
+Sub-hed: *What may be real, what's overclaimed, and how to try it without getting captured.*
+*(Alts considered: "Read the claim before it reads you." · "Hope, without getting played.")*
 
 ### Controlling Idea
 You shouldn't have to choose between false hope and bitter cynicism to make a health decision. With an honest read, you can hold both hope and skepticism — and trust yourself again.

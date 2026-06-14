@@ -19,7 +19,7 @@ Joseph's prompts arrived (JTBD + Business Foundation + ICP + BrandScript). Execu
 - [x] **B2.** `brand/02-business-foundation.md` — offering/value/pricing/diagnosis/priorities
 - [x] **B3.** `brand/03-ideal-client-profile.md` — segments, prioritization, lead ICP, where to find them
 - [x] **B4.** `brand/04-brandscript.md` — StoryBrand script to drive all marketing copy
-- [ ] **B5. Website revision (next).** Rebuild the `ship/` homepage as a StoryBrand narrative driven by `brand/04-brandscript.md`: hero = "Read the claim before it reads you," story strip = External→Internal→Philosophical problem, Guide (is-it-biased?) section, paste tool framed by the 3-step "Open Read" plan, Failure/Success band, identity-shift close + CTA + email magnet. **Awaiting Wyatt sign-off on lead ICP + tagline before rebuild** (see Decisions).
+- [x] **B5. Website revision (Codex, complete).** Rebuild the `ship/` homepage as a StoryBrand narrative driven by `brand/04-brandscript.md`. Sign-off received 2026-06-14: lead ICP = Burned-but-Hopeful Researcher; **hero tagline = "Discernment for the things being sold to your health."** (sub-hed: "What may be real, what's overclaimed, and how to try it without getting captured."). Sections: hero+tool → problem story strip (external→internal→philosophical) → villain band (the persuasion machine) → Guide ("is this biased too?" → no skin in the sale + authority) → 3-step "Open Read" plan framing the live demo → existing result/soul/etc. sections as the demo → Failure/Success band → identity-shift close + CTA + "5 Red Flags" email magnet. Static only; do NOT alter app.js or the result-section IDs it populates.
 
 ## Bucket C: directional / roadmap (capture, don't build)
 - **Browser extension = the distribution channel.** Product functionality (the claim-read loop) eventually moves into an extension: click an icon on any site → OpenLabel's epistemic read of that site's claims. Homepage then becomes pure marketing.
@@ -38,4 +38,11 @@ Bucket A implemented by Codex; diff reviewed, matches plan, in scope.
 - **A3** ✓ 3-beat `.story-strip` (closed labels overclaim → OpenLabel opens the claim → try the read) added under hero copy; try-it widget untouched and still prominent.
 - Scope clean: only `ship/index.html` + `ship/styles.css` changed; `app.js`, seeded reads, and soul section untouched. Uses existing CSS vars; responsive collapse added.
 - Caveat: Codex couldn't do a full visual render in its sandbox (verified via DOM harness only). Opened in browser locally for eyeball check.
-- **Next:** Wyatt to eyeball; Bucket B unblocks when Joseph sends the JTBD + BrandScript prompts.
+
+## Review (Claude) — B5 homepage rebuild, 2026-06-14
+Codex rebuilt `ship/` homepage from `brand/04-brandscript.md`; diff reviewed, matches plan and BrandScript.
+- Structure ships in BrandScript order: hero ("Discernment for the things being sold to your health.") + prominent paste tool → problem strip External("Reviews are gamed.")→Internal("You feel stuck.")→Philosophical("That isn't fair.") → villain ("The persuasion machine of the wellness market.") → Guide ("Is this biased too?" / "No skin in the sale." / "A method you can inspect." / "Worked audits, not vibes.") → 3-step "Paste it. Read it. Decide clearer." → existing live demo (BrainTap read + soul + alternatives + panels + evidence) → Failure/Success ("The cycle keeps going." / "You feel calm instead of cornered.") → close ("Be a discerning health navigator." + CTA + "5 Red Flags" magnet).
+- **Tool integrity verified:** `app.js` untouched (empty diff); all 14 result-section IDs present exactly once; all 4 sample buttons intact; Codex's DOM harness confirms seeded BrainTap read still populates.
+- Scope clean: only `ship/index.html` (+131) + `ship/styles.css` (+255), reuses existing CSS vars + card patterns, responsive collapses added.
+- Caveat: no visual screenshot render in Codex sandbox; opened locally for eyeball.
+- **Next:** Wyatt eyeball; then Bucket C roadmap (browser extension PoC, public audit pages, monetization) when ready.
